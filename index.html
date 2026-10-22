@@ -51,6 +51,7 @@
             margin-left: 5px;
             border-radius: 4px;
             transition: 0.3s;
+            font-weight: bold;
         }
 
         .lang-switch button:hover, .lang-switch button.active {
@@ -128,7 +129,7 @@
         }
         .trust-card i { font-size: 2.5rem; color: var(--primary-red); margin-bottom: 15px; }
 
-        /* --- Dangerous Goods Section (Specific Requirement) --- */
+        /* --- Dangerous Goods Section --- */
         .dg-section {
             padding: 80px 5%;
             background: var(--white);
@@ -152,7 +153,6 @@
             position: relative;
             overflow: hidden;
         }
-        /* Simulating a DG label look */
         .dg-badge {
             position: absolute;
             bottom: 20px;
@@ -182,7 +182,7 @@
         .schedule-table th { background: var(--primary-red); color: var(--white); }
         .current-month { background-color: rgba(227, 30, 36, 0.1); font-weight: bold; border-left: 4px solid var(--primary-red); }
 
-        /* --- Order Form (No Price Display) --- */
+        /* --- Order Form --- */
         .order-section { padding: 80px 5%; background: var(--white); }
         .order-container {
             max-width: 800px;
@@ -260,7 +260,7 @@
             background: white;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            display: none; /* Hidden by default */
+            display: none;
             flex-direction: column;
             z-index: 2000;
             overflow: hidden;
@@ -272,14 +272,13 @@
         .msg.bot { background: #e9ecef; color: black; align-self: flex-start; border-bottom-left-radius: 2px; }
         .msg.user { background: var(--primary-red); color: white; margin-left: auto; border-bottom-right-radius: 2px; }
 
-        /* Footer */
         footer { background: #1a1a1a; color: #888; padding: 40px 5%; text-align: center; }
         footer p { margin-top: 10px; font-size: 0.9rem; }
 
         @media (max-width: 768px) {
             .form-grid { grid-template-columns: 1fr; }
             .hero h1 { font-size: 2.5rem; }
-            .nav-links { display: none; } /* Simplified for mobile demo */
+            .nav-links { display: none; }
         }
     </style>
 </head>
@@ -340,7 +339,7 @@
         </div>
     </section>
 
-    <!-- Dangerous Goods Section (Critical Requirement) -->
+    <!-- Dangerous Goods Section -->
     <section id="dg" class="dg-section">
         <div class="dg-image">
             <i class="fas fa-radiation-alt"></i>
@@ -361,8 +360,8 @@
 
     <!-- Monthly Flight Schedule -->
     <section id="schedule" class="schedule-section">
-        <h2 data-key="sched_title">Monthly Flight Schedule (Yerevan - Moscow)</h2>
-        <p data-key="sched_sub">Operated by Ural Airlines. Subject to change based on seasonality.</p>
+        <h2 data-key="sched_title">Flight Schedule (Yerevan - Moscow)</h2>
+        <p data-key="sched_sub">Operated by Ural Airlines. Valid from current date through end of year.</p>
         
         <table class="schedule-table">
             <thead>
@@ -375,12 +374,12 @@
                 </tr>
             </thead>
             <tbody id="scheduleBody">
-                <!-- Populated by JS -->
+                <!-- Populated dynamically by JS -->
             </tbody>
         </table>
     </section>
 
-    <!-- Order Form (No Prices) -->
+    <!-- Order Form -->
     <section id="order" class="order-section">
         <div class="order-container">
             <h2 style="text-align: center; margin-bottom: 10px;" data-key="form_title">Request a Shipping Quote</h2>
@@ -452,7 +451,7 @@
 
     <!-- JavaScript Logic -->
     <script>
-        // --- Translations Dictionary ---
+        // --- CORRECTED TRANSLATIONS ---
         const translations = {
             en: {
                 nav_about: "About Us", nav_dg: "Dangerous Goods", nav_schedule: "Schedule", nav_reviews: "Reviews", nav_quote: "Get a Quote",
@@ -466,57 +465,55 @@
                 dg_title: "Dangerous Goods Transportation",
                 dg_desc: "We specialize in the safe and compliant transport of hazardous materials. Our team holds valid IATA Dangerous Goods Regulations (DGR) certification.",
                 dg_li_1: "Proper Classification & Labeling", dg_li_2: "Specialized Packaging Solutions", dg_li_3: "Full Documentation Handling", dg_li_4: "Compliance with Ural Airlines DG Policies",
-                sched_title: "Monthly Flight Schedule (Yerevan - Moscow)", sched_sub: "Operated by Ural Airlines. Subject to change based on seasonality.",
+                sched_title: "Flight Schedule (Yerevan - Moscow)", sched_sub: "Operated by Ural Airlines. Valid from current date through end of year.",
                 tbl_month: "Month", tbl_days: "Days", tbl_flight: "Flight", tbl_dep: "Dep (EVN)", tbl_arr: "Arr (DME)",
                 form_title: "Request a Shipping Quote", form_sub: "Our specialists will calculate the best rate and contact you within 1 hour.",
                 form_btn: "Send Request to Specialist",
                 rev_title: "Client Testimonials"
             },
             ru: {
-                nav_about: "О нас", nav_dg: "Опасные грузы", nav_schedule: "Расписание", nav_reviews: "Отзывы", nav_quote: "Запросить цену",
-                hero_title: "Надежные Авиаперевозки<br>Армения - Россия",
-                hero_sub: "Официальный партнер Уральских Авиалиний. Безопасная и сертифицированная логистика с 2004 года.",
-                hero_btn: "Начать отправку",
-                about_title: "Почему Cargo Service LLC?",
-                trust_1_title: "С 2004 года", trust_1_desc: "Более 20 лет опыта в международных авиагрузоперевозках.",
-                trust_2_title: "Партнер Уральских Авиалиний", trust_2_desc: "Прямая транспортировка через Уральские Авиалинии.",
-                trust_3_title: "Надежное имя", trust_3_desc: "Тысячи успешных доставок и долгосрочные корпоративные партнерства.",
-                dg_title: "Перевозка Опасных Грузов",
-                dg_desc: "Мы специализируемся на безопасной перевозке опасных материалов. Наша команда имеет сертификацию IATA DGR.",
-                dg_li_1: "Правильная классификация и маркировка", dg_li_2: "Специализированная упаковка", dg_li_3: "Полное оформление документов", dg_li_4: "Соответствие политикам Уральских Авиалиний",
-                sched_title: "Ежемесячное расписание (Ереван - Москва)", sched_sub: "Выполняется Уральскими Авиалиниями.",
-                tbl_month: "Месяц", tbl_days: "Дни", tbl_flight: "Рейс", tbl_dep: "Выл (EVN)", tbl_arr: "Прил (DME)",
-                form_title: "Запросить расчет стоимости", form_sub: "Наши специалисты рассчитают лучшую ставку и свяжутся с вами в течение 1 часа.",
+                nav_about: "О компании", nav_dg: "Опасные грузы", nav_schedule: "Расписание", nav_reviews: "Отзывы", nav_quote: "Рассчитать стоимость",
+                hero_title: "Надежные Авиаперевозки<br>Армения — Россия",
+                hero_sub: "Официальный партнер «Уральских авиалиний». Безопасная и сертифицированная логистика с 2004 года.",
+                hero_btn: "Оформить заявку",
+                about_title: "Почему выбирают Cargo Service LLC?",
+                trust_1_title: "Работаем с 2004 года", trust_1_desc: "Более 20 лет опыта в сфере международных авиагрузоперевозок.",
+                trust_2_title: "Партнер «Уральских авиалиний»", trust_2_desc: "Прямая транспортировка рейсами авиакомпании для максимальной надежности.",
+                trust_3_title: "Безупречная репутация", trust_3_desc: "Тысячи успешных доставок и долгосрочное сотрудничество с бизнесом.",
+                dg_title: "Перевозка опасных грузов",
+                dg_desc: "Мы специализируемся на безопасной транспортировке опасных материалов. Наша команда имеет действующий сертификат IATA DGR.",
+                dg_li_1: "Классификация и маркировка по стандартам", dg_li_2: "Специализированная упаковка", dg_li_3: "Полное таможенное оформление", dg_li_4: "Соблюдение правил «Уральских авиалиний»",
+                sched_title: "Расписание рейсов (Ереван — Москва)", sched_sub: "Выполняется «Уральскими авиалиниями». Актуально до конца года.",
+                tbl_month: "Месяц", tbl_days: "Дни вылетов", tbl_flight: "Рейс", tbl_dep: "Вылет (EVN)", tbl_arr: "Прилет (DME)",
+                form_title: "Запросить расчет стоимости", form_sub: "Наши специалисты рассчитают точную ставку и свяжутся с вами в течение часа.",
                 form_btn: "Отправить запрос специалисту",
                 rev_title: "Отзывы клиентов"
             },
             hy: {
-                nav_about: "եր մասին", nav_dg: "Վտանգավոր բեռներ", nav_schedule: "Թռիչքների օրացույց", nav_reviews: "Արագանքներ", nav_quote: "ատվիրել",
+                nav_about: "Մեր Մասին", nav_dg: "Վտանգավոր բեռներ", nav_schedule: "Թռիչքների օրացույց", nav_reviews: "Արձագանքներ", nav_quote: "Գնահատական",
                 hero_title: "Հուսալի Ավիաբեռնափոխադրումներ<br>Հայաստան - Ռուսաստան",
                 hero_sub: "Ural Airlines-ի պաշտոնական գործընկեր։ Անվտանգ և սերտիֆիկացված լոգիստիկա 2004 թվականից։",
-                hero_btn: "կսել առաքումը",
-                about_title: "Ինչու՞ Cargo Service LLC",
-                trust_1_title: "2004 թվականից", trust_1_desc: "Ավելի քան 20 տարվա փորձ միջազգային ավիաբեռնափոխադրումներում։",
-                trust_2_title: "Ural Airlines գործընկեր", trust_2_desc: "Ուղղակի փոխադրում Ural Airlines-ի միջոցով։",
-                trust_3_title: "ստահելի անուն", trust_3_desc: "Հազարավոր հաջող առաքումներ և երկարաժամկետ գործընկերություններ։",
-                dg_title: "Վտանգավոր բեռների փոխադրում",
-                dg_desc: "ենք մասնագիտացած ենք վտանգավոր նյութերի անվտանգ փոխադրման մեջ։ Մեր իմն ունի IATA DGR սերտիֆիկատ։",
-                dg_li_1: "Ճիշտ դասակարգում և պիտակավորում", dg_li_2: "ասնագիտացված փաթեթավորում", dg_li_3: "Փաստաթղթերի լրիվ ձևակերպում", dg_li_4: "Համապատասխանություն Ural Airlines-ի քաղաքականությանը",
-                sched_title: "Ամսական թռիչքների օրացույց (Երևան - Մոսկվա)", sched_sub: "ատարվում է Ural Airlines-ի կողմից։",
-                tbl_month: "Ամիս", tbl_days: "Օրեր", tbl_flight: "Չվերթ", tbl_dep: "եկն (EVN)", tbl_arr: "Ժամ (DME)",
-                form_title: "Պատվիրել հաշվարկ", form_sub: "Մեր մասնագետները կհաշվարկեն ավագույն գինը և կկապվեն ձեզ հետ 1 ժամվա նթացքում։",
-                form_btn: "Ուղարկել հարցում մասնագետին",
+                hero_btn: "Կատարել պատվեր",
+                about_title: "Ինչու՞ ընտրել Cargo Service LLC-ն",
+                trust_1_title: "2004 թվականից", trust_1_desc: "Ավելի քան 20 տարվա փորձ միջազգային ավիաբեռնափոխադրումների ոլորտում։",
+                trust_2_title: "Ural Airlines գործընկեր", trust_2_desc: "Ուղղակի փոխադրում Ural Airlines-ի չվերթներով՝ երաշխավորված արագություն և հուսալիություն։",
+                trust_3_title: "Վստահելի անուն", trust_3_desc: "Հազարավոր հաջող առաքումներ և երկարաժամկետ գործընկերություններ։",
+                dg_title: "Վտանգավոր բեռների ոխադրում",
+                dg_desc: "Մենք մասնագիտացած ենք վտանգավոր նյութերի անվտանգ փոխադրման մեջ։ Մեր թիմն ունի IATA DGR գործող սերտիֆիկատ։",
+                dg_li_1: "իշտ դասակարգում և պիտակավորում", dg_li_2: "Մասնագիտացված փաթեթավորում", dg_li_3: "Փաստաթղթերի լրիվ ձևակերպում", dg_li_4: "Համապատասխանություն Ural Airlines-ի կանոններին",
+                sched_title: "Թռիչքների օրացույց (Երևան - Մոսկվա)", sched_sub: "Իրականացվում է Ural Airlines-ի կողմից։ Վավեր է մինչև տարեվերջ։",
+                tbl_month: "Ամիս", tbl_days: "Թռիչքի օրեր", tbl_flight: "Չվերթ", tbl_dep: "Թռիչք (EVN)", tbl_arr: "Ժամանում (DME)",
+                form_title: "Պատվիրել հաշվարկ", form_sub: "Մեր մասնագետները կհաշվարկեն ճշգրիտ գինը և կկապվեն ձեզ հետ 1 ժամվա ընթացքում։",
+                form_btn: "ւղարկել հարցում մասնագետին",
                 rev_title: "Հաճախորդների արձագանքներ"
             }
         };
 
         // --- Language Switcher Logic ---
         function setLang(lang) {
-            // Update active button state
             document.querySelectorAll('.lang-switch button').forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
 
-            // Update text content
             document.querySelectorAll('[data-key]').forEach(elem => {
                 const key = elem.getAttribute('data-key');
                 if(translations[lang][key]) {
@@ -525,26 +522,42 @@
             });
         }
 
-        // --- Dynamic Schedule Generation ---
-        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-        const currentMonthIndex = new Date().getMonth();
-        const scheduleBody = document.getElementById('scheduleBody');
-
-        months.forEach((month, index) => {
-            const row = document.createElement('tr');
-            // Highlight current month
-            if(index === currentMonthIndex) row.classList.add('current-month');
+        // --- DYNAMIC SCHEDULE GENERATOR (Current Date -> End of Year) ---
+        function generateSchedule() {
+            const scheduleBody = document.getElementById('scheduleBody');
+            const now = new Date();
+            const currentYear = now.getFullYear();
+            const currentMonth = now.getMonth(); // 0-11
             
-            // Simulating Ural Airlines schedule pattern (e.g., Mon/Wed/Fri)
-            row.innerHTML = `
-                <td>${month} 2024</td>
-                <td>Mon, Wed, Fri</td>
-                <td>U6 782</td>
-                <td>10:00 AM</td>
-                <td>01:30 PM</td>
-            `;
-            scheduleBody.appendChild(row);
-        });
+            // Ural Airlines typical days for EVN-DME: Mon, Wed, Fri, Sat
+            const flightDays = "Mon, Wed, Fri, Sat";
+            const flightNum = "U6 782";
+            const depTime = "10:00 AM";
+            const arrTime = "01:30 PM";
+
+            // Loop from current month to December (11)
+            for (let m = currentMonth; m <= 11; m++) {
+                const row = document.createElement('tr');
+                
+                // Highlight current month
+                if(m === currentMonth) row.classList.add('current-month');
+                
+                // Get Month Name based on browser locale or default English
+                const monthName = new Date(currentYear, m).toLocaleString('default', { month: 'long' });
+                
+                row.innerHTML = `
+                    <td>${monthName} ${currentYear}</td>
+                    <td>${flightDays}</td>
+                    <td>${flightNum}</td>
+                    <td>${depTime}</td>
+                    <td>${arrTime}</td>
+                `;
+                scheduleBody.appendChild(row);
+            }
+        }
+
+        // Initialize Schedule on Load
+        window.onload = generateSchedule;
 
         // --- Chatbot Logic ---
         function toggleChat() {
@@ -562,7 +575,6 @@
             const text = input.value.trim();
             
             if(text) {
-                // Add User Message
                 const userMsg = document.createElement('div');
                 userMsg.className = 'msg user';
                 userMsg.innerText = text;
@@ -571,7 +583,6 @@
                 input.value = '';
                 body.scrollTop = body.scrollHeight;
 
-                // Simulate Bot Response after delay
                 setTimeout(() => {
                     const botMsg = document.createElement('div');
                     botMsg.className = 'msg bot';
