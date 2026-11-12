@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CARGO SERVICE LLC | International Air Freight</title>
+    
+    <!-- SEO META TAGS -->
+    <title>CARGO SERVICE LLC | Air Freight Armenia - Ural Airlines Representative</title>
+    <meta name="description" content="CARGO SERVICE LLC has been providing reliable international air freight services since 2004. Official representative of Ural Airlines in Armenia. Dangerous goods transportation, cargo from Russia to Armenia and USA.">
+    <meta name="keywords" content="Air Freight Armenia, Cargo Service LLC, Ural Airlines Armenia, Hayways, Dangerous Goods Transport, Air Cargo Yerevan, Logistics Armenia, Ferrari Transport Armenia">
+    <meta name="author" content="CARGO SERVICE LLC">
+    <meta property="og:title" content="CARGO SERVICE LLC | International Air Freight">
+    <meta property="og:description" content="Reliable air freight solutions since 2004. Official Ural Airlines representative.">
+    <meta property="og:image" content="assets/hero.jpg">
     
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
@@ -38,53 +46,48 @@
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
         
-        /* Running Line Animation */
+        /* Running Line */
         .marquee-container { overflow: hidden; white-space: nowrap; position: relative; }
-        .marquee-content { 
-            display: inline-block; 
-            animation: marquee 25s linear infinite; 
-            padding-left: 100%;
-        }
-        @keyframes marquee { 
-            0% { transform: translateX(0); } 
-            100% { transform: translateX(-100%); } 
-        }
+        .marquee-content { display: inline-block; animation: marquee 25s linear infinite; padding-left: 100%; }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
 
         /* Image Styles */
         img { display: block; width: 100%; height: auto; }
-        .img-placeholder {
-            background-color: #e5e7eb;
-            display: flex; align-items: center; justify-content: center;
-            color: #6b7280; font-weight: bold; text-align: center;
-            border: 2px dashed #9ca3af; min-height: 100px;
-        }
+        .img-placeholder { background-color: #e5e7eb; display: flex; align-items: center; justify-content: center; color: #6b7280; font-weight: bold; text-align: center; border: 2px dashed #9ca3af; min-height: 100px; }
+
+        /* Chat Widget */
+        .chat-widget { position: fixed; bottom: 20px; right: 20px; z-index: 100; }
+        .chat-window { display: none; width: 300px; height: 400px; background: white; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); flex-direction: column; overflow: hidden; }
+        .chat-header { background: var(--ruby); color: white; padding: 10px; font-weight: bold; display: flex; justify-content: space-between; }
+        .chat-body { flex: 1; padding: 10px; overflow-y: auto; background: #f9f9f9; font-size: 0.9rem; }
+        .chat-input { padding: 10px; border-top: 1px solid #eee; display: flex; }
+        .msg { margin-bottom: 8px; padding: 8px; border-radius: 5px; max-width: 80%; }
+        .msg-bot { background: #e2e8f0; align-self: flex-start; }
+        .msg-user { background: #C62845; color: white; align-self: flex-end; margin-left: auto; }
     </style>
 </head>
 <body class="text-navy bg-white">
 
     <!-- RUNNING LINE -->
     <div class="bg-ruby text-white py-1.5 marquee-container font-bold uppercase text-xs tracking-wider">
-        <div id="marquee-text" class="marquee-content">
-            HURRY UP TO BOOK YOUR SPOT - LIMITED AVAILABILITY
-        </div>
+        <div id="marquee-text" class="marquee-content">HURRY UP TO BOOK YOUR SPOT - LIMITED AVAILABILITY</div>
     </div>
 
-    <!-- HEADER (COMPACT) -->
+    <!-- HEADER -->
     <header class="sticky top-0 z-50 bg-white border-b border-border-grey shadow-sm">
         <div class="container mx-auto px-4 py-2.5 flex justify-between items-center">
-            <!-- LOGO WITH HOME LINK -->
             <a href="#home" class="flex items-center gap-3 hover:opacity-80 transition">
-                <!-- CHECK THIS PATH: assets/logo.png -->
                 <img src="assets/logo.png" alt="Cargo Service Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="h-10 w-auto object-contain">
                 <div class="h-10 w-32 img-placeholder rounded text-[10px] border-none bg-transparent hidden">LOGO MISSING</div>
             </a>
 
-            <!-- Compact Navigation -->
             <nav class="hidden lg:flex items-center gap-6 font-medium text-xs uppercase tracking-wide">
                 <a href="#home" class="hover:text-ruby transition-colors py-2" data-i18n="nav_home">HOME</a>
+                <a href="#about" class="hover:text-ruby transition-colors py-2" data-i18n="nav_about">ABOUT US</a>
                 <a href="#schedule" class="hover:text-ruby transition-colors py-2" data-i18n="nav_schedule">SCHEDULE</a>
                 <a href="#services" class="hover:text-ruby transition-colors py-2" data-i18n="nav_services">SERVICES</a>
                 <a href="#partners" class="hover:text-ruby transition-colors py-2" data-i18n="nav_partners">PARTNERS</a>
+                <a href="#faq" class="hover:text-ruby transition-colors py-2" data-i18n="nav_faq">FAQ</a>
                 <a href="#contact" class="hover:text-ruby transition-colors py-2" data-i18n="nav_contact">CONTACT</a>
             </nav>
 
@@ -94,32 +97,42 @@
                     <option value="ru">RU</option>
                     <option value="hy">HY</option>
                 </select>
-                <a href="#contact" class="bg-ruby hover:bg-ruby-dark text-white px-5 py-2 rounded text-xs font-semibold uppercase transition-all-300" data-i18n="btn_quote">
-                    Request a Quote
-                </a>
+                <a href="#contact" class="bg-ruby hover:bg-ruby-dark text-white px-5 py-2 rounded text-xs font-semibold uppercase transition-all-300" data-i18n="btn_quote">Request a Quote</a>
             </div>
             
-            <button class="lg:hidden text-xl text-navy" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+            <button class="lg:hidden text-xl text-navy" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"><i class="fa-solid fa-bars"></i></button>
         </div>
         <div id="mobile-menu" class="hidden lg:hidden bg-white border-t p-4">
             <a href="#home" class="block py-2 text-sm">Home</a>
-            <a href="#schedule" class="block py-2 text-sm">Schedule</a>
-            <a href="#partners" class="block py-2 text-sm">Partners</a>
+            <a href="#about" class="block py-2 text-sm">About Us</a>
             <a href="#contact" class="block py-2 text-ruby font-bold text-sm">Contact</a>
         </div>
     </header>
 
-    <!-- HERO SECTION (ID="home") -->
+    <!-- HERO SECTION -->
     <section id="home" class="relative h-[550px] flex items-center bg-navy overflow-hidden">
         <img src="assets/hero.jpg" alt="Cargo Plane" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="absolute inset-0 w-full h-full object-cover opacity-40">
         <div class="absolute inset-0 img-placeholder opacity-20 border-none bg-navy hidden">UPLOAD assets/hero.jpg</div>
-        
         <div class="container mx-auto px-4 relative z-10 text-center text-white">
             <h1 class="text-4xl lg:text-5xl font-bold mb-4" data-i18n="hero_title">YOUR CARGO. OUR PRIORITY.</h1>
             <p class="text-lg text-gray-200 mb-6 max-w-2xl mx-auto" data-i18n="hero_desc">Reliable international air freight solutions backed by over 20 years of logistics experience.</p>
             <a href="#contact" class="bg-ruby hover:bg-ruby-dark text-white px-8 py-3 rounded font-bold uppercase transition-all-300 text-sm" data-i18n="btn_book">Book Your Shipment</a>
+        </div>
+    </section>
+
+    <!-- ABOUT US SECTION -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl font-bold text-navy mb-8 text-center" data-i18n="about_title">ABOUT CARGO SERVICE LLC</h2>
+            <div class="prose prose-lg text-text-secondary mx-auto">
+                <p data-i18n="about_p1" class="mb-4">Since 2004, CARGO SERVICE LLC has been a pillar of reliability in the international air freight market. We have built a reputation for trust and professionalism that stands firm even in the most challenging times.</p>
+                
+                <p data-i18n="about_p2" class="mb-4">During the global disruptions of the COVID-19 pandemic, while many stopped, we continued to operate. We successfully organized the complex transportation of approximately 3,000 kg of catalytic converters from Armenia to the United States, proving our resilience and logistical capability.</p>
+                
+                <p data-i18n="about_p3" class="mb-4">Today, as the <strong>Official Representative of Ural Airlines</strong> in Armenia, we ensure uninterrupted cargo transportation between Russia and Armenia, despite international restrictions. We are dedicated to the safe and secure transport of your goods.</p>
+                
+                <p data-i18n="about_p4">Furthermore, we specialize in the transportation of Dangerous Goods, managed by our certified professionals who ensure full compliance with international safety regulations.</p>
+            </div>
         </div>
     </section>
 
@@ -149,12 +162,6 @@
                             <td class="p-3">Yekaterinburg (SVX) – Yerevan (EVN)</td>
                             <td class="p-3">3x Weekly</td>
                             <td class="p-3"><span class="text-green-600 font-bold">Active</span></td>
-                        </tr>
-                        <tr>
-                            <td class="p-3 font-bold">HAYWAYS LLC</td>
-                            <td class="p-3">Charter / Cargo Flights</td>
-                            <td class="p-3">On Demand</td>
-                            <td class="p-3"><span class="text-ruby font-bold">Inquire</span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -191,8 +198,6 @@
         <div class="container mx-auto px-4">
             <h2 class="text-2xl font-bold text-navy mb-10 text-center">AIRLINE PARTNERS</h2>
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                
-                <!-- Ural Airlines -->
                 <div class="bg-white p-6 rounded shadow-sm text-center flex flex-col items-center">
                     <div class="h-24 w-full mb-4 flex items-center justify-center">
                         <img src="assets/ural.jpg" alt="Ural Airlines" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="h-full object-contain">
@@ -201,8 +206,6 @@
                     <h3 class="font-bold text-lg text-navy">URAL AIRLINES</h3>
                     <p class="text-xs text-ruby font-bold uppercase mt-1">Official Representative</p>
                 </div>
-
-                <!-- Hayways -->
                 <div class="bg-white p-6 rounded shadow-sm text-center flex flex-col items-center">
                     <div class="h-24 w-full mb-4 flex items-center justify-center">
                         <img src="assets/hayways.jpg" alt="Hayways" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="h-full object-contain">
@@ -211,42 +214,38 @@
                     <h3 class="font-bold text-lg text-navy">HAYWAYS LLC</h3>
                     <p class="text-xs text-ruby font-bold uppercase mt-1">Strategic Cooperation</p>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold text-navy mb-10 text-center">OUR EXPERIENCE</h2>
-            <div class="grid lg:grid-cols-2 gap-8">
-                <div class="bg-cool-grey rounded-lg overflow-hidden">
-                    <img src="assets/covid.jpg" alt="Logistics" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="w-full h-48 object-cover">
-                    <div class="h-48 img-placeholder hidden">UPLOAD assets/covid.jpg</div>
-                    <div class="p-5">
-                        <h3 class="font-bold text-base">COVID-19 Logistics</h3>
-                        <p class="text-xs text-text-secondary mt-1">Export of 3,000 kg of catalytic converters from Armenia to USA.</p>
-                    </div>
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-2xl font-bold text-navy mb-10 text-center" data-i18n="faq_title">FREQUENTLY ASKED QUESTIONS</h2>
+            <div class="space-y-4">
+                <!-- Q1 -->
+                <div class="border border-border-grey rounded p-4">
+                    <h3 class="font-bold text-navy mb-2" data-i18n="faq_q1">Do you transport Dangerous Goods?</h3>
+                    <p class="text-sm text-text-secondary" data-i18n="faq_a1">Yes, we hold the necessary certifications and have professional specialists to handle Dangerous Goods transportation safely and legally.</p>
                 </div>
-                <div class="bg-cool-grey rounded-lg overflow-hidden">
-                    <img src="assets/ferrari.jpg" alt="Ferrari" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="w-full h-48 object-cover">
-                    <div class="h-48 img-placeholder hidden">UPLOAD assets/ferrari.jpg</div>
-                    <div class="p-5">
-                        <h3 class="font-bold text-base">High-Value Transport</h3>
-                        <p class="text-xs text-text-secondary mt-1">Transportation of Ferrari vehicles between Russia and Armenia.</p>
-                    </div>
+                <!-- Q2 -->
+                <div class="border border-border-grey rounded p-4">
+                    <h3 class="font-bold text-navy mb-2" data-i18n="faq_q2">Can you ship cargo from Russia to Armenia now?</h3>
+                    <p class="text-sm text-text-secondary" data-i18n="faq_a2">Absolutely. As the official representative of Ural Airlines, we ensure uninterrupted cargo flights between Moscow/Yekaterinburg and Yerevan despite restrictions.</p>
+                </div>
+                <!-- Q3 -->
+                <div class="border border-border-grey rounded p-4">
+                    <h3 class="font-bold text-navy mb-2" data-i18n="faq_q3">How is the shipping cost calculated?</h3>
+                    <p class="text-sm text-text-secondary" data-i18n="faq_a3">Cost depends on weight and volume. The volumetric weight is calculated as (Length x Width x Height) / 6000. You pay for the higher of the two weights.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
+    <!-- CONTACT & MAP -->
     <section id="contact" class="py-16 bg-navy text-white">
         <div class="container mx-auto px-4">
             <div class="grid lg:grid-cols-2 gap-10">
-                
-                <!-- Contact Info -->
                 <div>
                     <h2 class="text-2xl font-bold mb-6" data-i18n="contact_title">CONTACT US</h2>
                     <div class="space-y-4 text-sm">
@@ -255,7 +254,6 @@
                             <div>
                                 <p class="font-bold text-white" data-i18n="lbl_address">Address:</p>
                                 <p class="text-gray-300">Zvartnots Cargo Complex, Armenia</p>
-                                <p class="text-gray-300">Զվարթնոց բեռնային համալիր</p>
                             </div>
                         </div>
                         <div class="flex items-center gap-4">
@@ -268,8 +266,12 @@
                         </div>
                     </div>
                     
-                    <div class="mt-6 h-48 bg-gray-700 rounded flex items-center justify-center border border-gray-600">
-                        <span class="text-gray-400 text-xs">Google Maps Placeholder</span>
+                    <!-- GOOGLE MAP -->
+                    <div class="mt-6 h-64 bg-gray-200 rounded overflow-hidden border border-gray-600">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2986.5!2d44.3975!3d40.1475!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abef582800979%3A0x67890abcdef!2sZvartnots+International+Airport!5m2!1sen!2sam" 
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
                     </div>
                 </div>
 
@@ -279,17 +281,14 @@
                     <form id="quote-form" class="space-y-3">
                         <input type="text" data-i18n-ph="ph_name" placeholder="Full Name" required class="w-full bg-cool-grey border p-2 rounded text-sm">
                         <input type="email" data-i18n-ph="ph_email" placeholder="Email Address" required class="w-full bg-cool-grey border p-2 rounded text-sm">
-                        
                         <div class="grid grid-cols-3 gap-2">
                             <input type="number" id="calc-l" placeholder="L (cm)" class="w-full bg-cool-grey border p-2 rounded text-sm">
                             <input type="number" id="calc-w" placeholder="W (cm)" class="w-full bg-cool-grey border p-2 rounded text-sm">
                             <input type="number" id="calc-h" placeholder="H (cm)" class="w-full bg-cool-grey border p-2 rounded text-sm">
                         </div>
-                        
                         <div class="bg-ruby/10 p-2 rounded text-center text-xs">
                             <span data-i18n="lbl_vol">Vol. Weight:</span> <span id="vol-result" class="font-bold text-ruby">0</span> kg
                         </div>
-
                         <textarea data-i18n-ph="ph_msg" placeholder="Message details..." class="w-full bg-cool-grey border p-2 rounded h-20 text-sm"></textarea>
                         <button type="submit" class="w-full bg-ruby text-white py-2 rounded font-bold uppercase hover:bg-ruby-dark text-sm" data-i18n="btn_send">Send Inquiry</button>
                     </form>
@@ -303,59 +302,99 @@
         <p>&copy; 2026 CARGO SERVICE LLC. Official Representative of URAL AIRLINES.</p>
     </footer>
 
+    <!-- AI CHATBOT WIDGET -->
+    <div class="chat-widget">
+        <div id="chat-window" class="chat-window">
+            <div class="chat-header">
+                <span>CARGO ASSISTANT</span>
+                <button onclick="toggleChat()" class="text-white hover:text-gray-200"><i class="fa-solid fa-times"></i></button>
+            </div>
+            <div id="chat-body" class="chat-body">
+                <div class="msg msg-bot" data-i18n="chat_welcome">Hello! How can I help you with your cargo today?</div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chat-input-field" placeholder="Type here..." class="flex-1 border p-2 text-sm rounded-l outline-none">
+                <button onclick="sendMessage()" class="bg-ruby text-white px-3 rounded-r"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+        <button onclick="toggleChat()" class="bg-ruby hover:bg-ruby-dark text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center text-xl transition-all-300">
+            <i class="fa-solid fa-comments"></i>
+        </button>
+    </div>
+
     <!-- JAVASCRIPT -->
     <script>
+        // TRANSLATIONS DATA
         const translations = {
             en: {
-                nav_home: "HOME", nav_schedule: "SCHEDULE", nav_services: "SERVICES", nav_partners: "PARTNERS", nav_contact: "CONTACT",
+                nav_home: "HOME", nav_about: "ABOUT US", nav_schedule: "SCHEDULE", nav_services: "SERVICES", nav_partners: "PARTNERS", nav_faq: "FAQ", nav_contact: "CONTACT",
                 btn_quote: "Request a Quote",
                 hero_title: "YOUR CARGO. OUR PRIORITY.",
                 hero_desc: "Reliable international air freight solutions backed by over 20 years of logistics experience.",
                 btn_book: "Book Your Shipment",
-                services_title: "OUR SERVICES",
+                about_title: "ABOUT CARGO SERVICE LLC",
+                about_p1: "Since 2004, CARGO SERVICE LLC has been a pillar of reliability in the international air freight market. We have built a reputation for trust and professionalism.",
+                about_p2: "During the COVID-19 pandemic, we successfully organized the transportation of 3,000 kg of catalytic converters from Armenia to the USA, proving our resilience.",
+                about_p3: "As the Official Representative of Ural Airlines, we ensure uninterrupted cargo flights between Russia and Armenia despite restrictions.",
+                about_p4: "We also specialize in Dangerous Goods transportation, managed by our certified professionals.",
                 schedule_title: "FLIGHT SCHEDULE",
-                contact_title: "CONTACT US",
-                lbl_address: "Address:",
-                form_title: "REQUEST A QUOTE",
-                lbl_vol: "Vol. Weight:",
-                btn_send: "Send Inquiry",
-                marquee: "⚠️ HURRY UP TO BOOK YOUR SPOT - LIMITED AVAILABILITY",
-                ph_name: "Full Name", ph_email: "Email Address", ph_msg: "Message details..."
+                services_title: "OUR SERVICES",
+                faq_title: "FREQUENTLY ASKED QUESTIONS",
+                faq_q1: "Do you transport Dangerous Goods?", faq_a1: "Yes, we hold the necessary certifications and have professional specialists.",
+                faq_q2: "Can you ship from Russia now?", faq_a2: "Yes, as Ural Airlines representatives, we ensure uninterrupted flights.",
+                faq_q3: "How is cost calculated?", faq_a3: "Cost depends on weight and volume (LxWxH/6000).",
+                contact_title: "CONTACT US", lbl_address: "Address:", form_title: "REQUEST A QUOTE", lbl_vol: "Vol. Weight:", btn_send: "Send Inquiry",
+                ph_name: "Full Name", ph_email: "Email Address", ph_msg: "Message details...",
+                chat_welcome: "Hello! How can I help you with your cargo today?",
+                marquee: "⚠️ HURRY UP TO BOOK YOUR SPOT - LIMITED AVAILABILITY"
             },
             ru: {
-                nav_home: "ГЛАВНАЯ", nav_schedule: "РАСПИСАНИЕ", nav_services: "УСЛУГИ", nav_partners: "ПАРТНЕРЫ", nav_contact: "КОНТАКТЫ",
+                nav_home: "ГЛАВНАЯ", nav_about: "О НАС", nav_schedule: "РАСПИСАНИЕ", nav_services: "УСЛУГИ", nav_partners: "ПАРТНЕРЫ", nav_faq: "FAQ", nav_contact: "КОНТАКТЫ",
                 btn_quote: "Запросить цену",
                 hero_title: "ВАШ ГРУЗ. НАШ ПРИОРИТЕТ.",
                 hero_desc: "Надежные международные авиагрузовые решения с 20-летним опытом.",
                 btn_book: "Забронировать",
-                services_title: "НАШИ УСЛУГИ",
+                about_title: "О КОМПАНИИ CARGO SERVICE LLC",
+                about_p1: "С 2004 года CARGO SERVICE LLC является эталоном надежности на рынке международных авиаперевозок.",
+                about_p2: "Во время пандемии мы успешно организовали перевозку 3000 кг катализаторов из Армении в США.",
+                about_p3: "Как официальный представитель Ural Airlines, мы обеспечиваем бесперебойные рейсы между Россией и Арменией.",
+                about_p4: "Мы также специализируемся на перевозке опасных грузов сертифицированными специалистами.",
                 schedule_title: "РАСПИСАНИЕ РЕЙСОВ",
-                contact_title: "СВЯЗАТЬСЯ С НАМИ",
-                lbl_address: "Адрес:",
-                form_title: "ЗАПРОСИТЬ ЦЕНУ",
-                lbl_vol: "Объемный вес:",
-                btn_send: "Отправить запрос",
-                marquee: "⚠️ УСПЕЙТЕ ЗАБРОНИРОВАТЬ МЕСТО - ОГРАНИЧЕННЫЕ ВОЗМОЖНОСТИ",
-                ph_name: "ФИО", ph_email: "Электронная почта", ph_msg: "Детали сообщения..."
+                services_title: "НАШИ УСЛУГИ",
+                faq_title: "ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ",
+                faq_q1: "Перевозите ли вы опасные грузы?", faq_a1: "Да, у нас есть необходимые сертификаты и специалисты.",
+                faq_q2: "Можно ли отправить груз из России?", faq_a2: "Да, как представители Ural Airlines, мы обеспечиваем бесперебойные рейсы.",
+                faq_q3: "Как рассчитывается стоимость?", faq_a3: "Стоимость зависит от веса и объема (ДхШхВ/6000).",
+                contact_title: "СВЯЗАТЬСЯ С НАМИ", lbl_address: "Адрес:", form_title: "ЗАПРОСИТЬ ЦЕНУ", lbl_vol: "Объемный вес:", btn_send: "Отправить запрос",
+                ph_name: "ФИО", ph_email: "Электронная почта", ph_msg: "Детали сообщения...",
+                chat_welcome: "Здравствуйте! Чем я могу помочь вам с грузом?",
+                marquee: "⚠️ УСПЕЙТЕ ЗАБРОНИРОВАТЬ МЕСТО - ОГРАНИЧЕННЫЕ ВОЗМОЖНОСТИ"
             },
             hy: {
-                nav_home: "ԳԼԽԱՎՈՐ", nav_schedule: "ԹՌԻՉՔՆԵՐ", nav_services: "ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐ", nav_partners: "ԳՈՐԾԸՆԿԵՐՆԵՐ", nav_contact: "ԿԱՊ",
+                nav_home: "ԳԼԽԱՎՈՐ", nav_about: "ՄԵՐ ՄԱՍԻՆ", nav_schedule: "ԹՌԻՉՔՆԵՐ", nav_services: "ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐ", nav_partners: "ԳՈՐԾԸՆԿԵՐՆԵՐ", nav_faq: "ՀՏՀ", nav_contact: "ԿԱՊ",
                 btn_quote: "Պատվերել գինը",
                 hero_title: "ՁԵՐ ԲԵՌԸ։ ՄԵՐ ԱՌԱՋՆՈՐԴՈՒԹՅՈՒՆԸ։",
                 hero_desc: "Վստահելի միջազգային ավիաբեռնափոխադրումներ՝ 20 տարվա փորձով։",
                 btn_book: "Ամրագրել բեռը",
-                services_title: "ՄԵՐ ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐԸ",
+                about_title: "ՄԵՐ ՄԱՍԻՆ",
+                about_p1: "2004 թվականից CARGO SERVICE LLC-ն միջազգային շուկայում վստահելիության և որակի խորհրդանիշ է։",
+                about_p2: "Նույնիսկ COVID-19-ի ժամանակ մենք իրականացրել ենք 3000 կգ կատալիզատորների արտահանում Հայաստանից ԱՄՆ։",
+                about_p3: "Որպես Ural Airlines-ի պաշտոնական ներկայացուցիչ՝ ապահովում ենք անխափան թռիչքներ Ռուսաստանի և Հայաստանի միջև։",
+                about_p4: "Մենք իրականացնում ենք նաև վտանգավոր բեռների փոխադրում սերտիֆիկացված մասնագետների կողմից։",
                 schedule_title: "ԹՌԻՉՔՆԵՐԻ ԺԱՄԱՆԱԿԱՑՈՒՅՑ",
-                contact_title: "ԿԱՊ ՄԵԶ ՀԵՏ",
-                lbl_address: "Հասցե:",
-                form_title: "ՊԱՏՎԵՐԵԼ ԳԻՆԸ",
-                lbl_vol: "Ծավալային քաշ:",
-                btn_send: "Ուղարկել հարցումը",
-                marquee: "⚠️ ՇՏԱՊԻՐ ՈՐ ՀԱՍՑՆԵՍ ԱՄՐԱԳՐԵԼ ՔՈ ՏԵՂԸ - ՍԱՀՄԱՆԱՓԱԿ ՀՆԱՐԱՎՈՐՈՒԹՅՈՒՆՆԵՐ",
-                ph_name: "Անուն Ազգանուն", ph_email: "Էլ. հասցե", ph_msg: "Հաղորդագրության մանրամասներ..."
+                services_title: "ՄԵՐ ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐԸ",
+                faq_title: "ՀԱՃԱԽ ՏՐՎՈՂ ՀԱՐՑԵՐ",
+                faq_q1: "Արդյոք դուք փոխադրու՞մ եք վտանգավոր բեռներ։", faq_a1: "Այո, մենք ունենք համապատասխան սերտիֆիկատներ և մասնագետներ։",
+                faq_q2: "Հնարավո՞ր է արդյոք բեռ ուղարկել Ռուսաստանից։", faq_a2: "Այո, որպես Ural Airlines-ի ներկայացուցիչ՝ մենք ապահովում ենք անխափան թռիչքներ։",
+                faq_q3: "Ինչպե՞ս է հաշվարկվում արժեքը։", faq_a3: "Արժեքը կախված է կշռից և ծավալից (ԵրկxԼայxԲարձ/6000)։",
+                contact_title: "ԿԱՊ ՄԵԶ ՀԵՏ", lbl_address: "Հասցե:", form_title: "ՊԱՏՎԵՐԵԼ ԳԻՆԸ", lbl_vol: "Ծավալային քաշ:", btn_send: "Ուղարկել հարցումը",
+                ph_name: "Անուն Ազգանուն", ph_email: "Էլ. հասցե", ph_msg: "Հաղորդագրության մանրամասներ...",
+                chat_welcome: "Ողջույն: Ինչպե՞ս կարող եմ օգնել ձեզ բեռնափոխադրման հարցում։",
+                marquee: "⚠️ ՇՏԱՊԻՐ ՈՐ ՀԱՍՑՆԵՍ ԱՄՐԱԳՐԵԼ ՔՈ ՏԵՂԸ - ՍԱՀՄԱՆԱՓԱԿ ՀՆԱՐԱՎՈՐՈՒԹՅՈՒՆՆԵՐ"
             }
         };
 
+        // LANGUAGE SWITCHER
         document.getElementById('lang-selector').addEventListener('change', function(e) {
             const lang = e.target.value;
             document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -368,8 +407,13 @@
             });
             const marqueeEl = document.getElementById('marquee-text');
             if(marqueeEl && translations[lang].marquee) marqueeEl.textContent = translations[lang].marquee;
+            
+            // Reset Chat Welcome Message
+            const chatBody = document.getElementById('chat-body');
+            chatBody.innerHTML = `<div class="msg msg-bot">${translations[lang].chat_welcome}</div>`;
         });
 
+        // CALCULATOR
         ['calc-l', 'calc-w', 'calc-h'].forEach(id => {
             document.getElementById(id).addEventListener('input', () => {
                 const l = parseFloat(document.getElementById('calc-l').value) || 0;
@@ -383,6 +427,42 @@
             e.preventDefault();
             alert("Inquiry sent to evn.cargo.service@gmail.com");
         });
+
+        // CHATBOT LOGIC
+        function toggleChat() {
+            const win = document.getElementById('chat-window');
+            win.style.display = win.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('chat-input-field');
+            const body = document.getElementById('chat-body');
+            const text = input.value.trim().toLowerCase();
+            const lang = document.getElementById('lang-selector').value;
+
+            if (!text) return;
+
+            // User Message
+            body.innerHTML += `<div class="msg msg-user">${input.value}</div>`;
+            input.value = '';
+
+            // Bot Response Logic (Simple Keyword Matching)
+            let response = "";
+            if (text.includes('price') || text.includes('cost') || text.includes('գին') || text.includes('цена')) {
+                response = lang === 'hy' ? "Գինը կախված է կշռից և ծավալից: Խնդրում ենք լրացնել հայտը:" : (lang === 'ru' ? "Цена зависит от веса и объема. Пожалуйста, заполните форму." : "Price depends on weight and volume. Please fill out the quote form.");
+            } else if (text.includes('dangerous') || text.includes('վտանգավոր') || text.includes('опасн')) {
+                response = lang === 'hy' ? "Այո, մենք ունենք վտանգավոր բեռների փոխադրման սերտիֆիկատ:" : (lang === 'ru' ? "Да, у нас есть сертификат на перевозку опасных грузов." : "Yes, we are certified for Dangerous Goods transportation.");
+            } else if (text.includes('russia') || text.includes('ռուսաստան') || text.includes('россия')) {
+                response = lang === 'hy' ? "Այո, մենք իրականացնում ենք անխափան թռիչքներ Ռուսաստանից:" : (lang === 'ru' ? "Да, мы осуществляем бесперебойные рейсы из России." : "Yes, we operate uninterrupted flights from Russia.");
+            } else {
+                response = lang === 'hy' ? "Խնդրում եմ զանգահարել +374 41 54 00 45 հասցեով:" : (lang === 'ru' ? "Пожалуйста, позвоните нам по номеру +374 41 54 00 45." : "Please contact us at +374 41 54 00 45 for more details.");
+            }
+
+            setTimeout(() => {
+                body.innerHTML += `<div class="msg msg-bot">${response}</div>`;
+                body.scrollTop = body.scrollHeight;
+            }, 500);
+        }
     </script>
 </body>
 </html>
