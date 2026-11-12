@@ -3,19 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CARGO SERVICE LLC | International Air Freight & Logistics</title>
+    <title>CARGO SERVICE LLC | International Air Freight</title>
     
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Custom Config -->
     <script>
         tailwind.config = {
             theme: {
@@ -42,51 +38,52 @@
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
         
+        /* Running Line Animation */
+        .marquee-container { overflow: hidden; white-space: nowrap; position: relative; }
+        .marquee-content { 
+            display: inline-block; 
+            animation: marquee 25s linear infinite; 
+            padding-left: 100%; /* Start from outside */
+        }
+        @keyframes marquee { 
+            0% { transform: translateX(0); } 
+            100% { transform: translateX(-100%); } 
+        }
+
         /* Image Placeholder Style */
         .img-placeholder {
             background-color: #e5e7eb;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #6b7280;
-            font-weight: bold;
-            text-align: center;
-            border: 2px dashed #9ca3af;
-            position: relative;
-            overflow: hidden;
+            display: flex; align-items: center; justify-content: center;
+            color: #6b7280; font-weight: bold; text-align: center;
+            border: 2px dashed #9ca3af; min-height: 200px;
         }
-        
-        .hero-bg {
-            background-color: #172D50;
-            position: relative;
-        }
-        
-        .transition-all-300 { transition: all 0.3s ease-in-out; }
     </style>
 </head>
 <body class="text-navy bg-white">
 
+    <!-- RUNNING LINE (DYNAMIC BY LANGUAGE) -->
+    <div class="bg-ruby text-white py-2 marquee-container font-bold uppercase text-sm tracking-wider">
+        <div id="marquee-text" class="marquee-content">
+            HURRY UP TO BOOK YOUR SPOT LIMITED AVAILABILITY
+        </div>
+    </div>
+
     <!-- HEADER -->
     <header class="sticky top-0 z-50 bg-white border-b border-border-grey shadow-sm">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <!-- LOGO PLACEHOLDER -->
             <a href="#" class="flex items-center gap-3">
                 <!-- REPLACE WITH: <img src="assets/logo.png" class="h-12"> -->
-                <div class="h-12 w-40 img-placeholder rounded text-xs">
-                    UPLOAD LOGO HERE
-                </div>
+                <div class="h-12 w-40 img-placeholder rounded text-xs border-none bg-transparent">LOGO HERE</div>
             </a>
 
-            <!-- Desktop Nav -->
             <nav class="hidden lg:flex items-center gap-8 font-medium text-sm">
                 <a href="#home" class="hover:text-ruby transition-colors" data-i18n="nav_home">HOME</a>
+                <a href="#schedule" class="hover:text-ruby transition-colors" data-i18n="nav_schedule">FLIGHT SCHEDULE</a>
                 <a href="#services" class="hover:text-ruby transition-colors" data-i18n="nav_services">SERVICES</a>
                 <a href="#partners" class="hover:text-ruby transition-colors" data-i18n="nav_partners">PARTNERS</a>
-                <a href="#experience" class="hover:text-ruby transition-colors" data-i18n="nav_exp">EXPERIENCE</a>
                 <a href="#contact" class="hover:text-ruby transition-colors" data-i18n="nav_contact">CONTACT</a>
             </nav>
 
-            <!-- Right Actions -->
             <div class="hidden lg:flex items-center gap-4">
                 <select id="lang-selector" class="bg-transparent text-sm font-bold text-navy focus:outline-none cursor-pointer border-r border-navy pr-2">
                     <option value="en">EN</option>
@@ -97,80 +94,65 @@
                     Request a Quote
                 </a>
             </div>
-
-            <!-- Mobile Menu Button -->
+            
             <button class="lg:hidden text-2xl text-navy" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
-        
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-border-grey p-4 absolute w-full shadow-lg">
-            <a href="#home" class="block py-3 border-b border-gray-100">Home</a>
-            <a href="#services" class="block py-3 border-b border-gray-100">Services</a>
-            <a href="#partners" class="block py-3 border-b border-gray-100">Partners</a>
-            <a href="#contact" class="block py-3 text-ruby font-bold">Request a Quote</a>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t p-4">
+            <a href="#home" class="block py-2">Home</a>
+            <a href="#schedule" class="block py-2">Schedule</a>
+            <a href="#contact" class="block py-2 text-ruby font-bold">Contact</a>
         </div>
     </header>
 
     <!-- HERO SECTION -->
-    <section id="home" class="hero-bg h-[700px] flex items-center relative">
-        <!-- BACKGROUND IMAGE PLACEHOLDER -->
+    <section id="home" class="relative h-[600px] flex items-center bg-navy overflow-hidden">
         <!-- REPLACE WITH: <img src="assets/hero.jpg" class="absolute inset-0 w-full h-full object-cover opacity-40"> -->
-        <div class="absolute inset-0 img-placeholder opacity-20 border-none bg-navy">
-            UPLOAD HERO BACKGROUND IMAGE HERE<br>(Cargo Plane at Airport)
+        <div class="absolute inset-0 img-placeholder opacity-20 border-none bg-navy">UPLOAD HERO IMAGE (assets/hero.jpg)</div>
+        
+        <div class="container mx-auto px-4 relative z-10 text-center text-white">
+            <h1 class="text-4xl lg:text-6xl font-bold mb-6" data-i18n="hero_title">YOUR CARGO. OUR PRIORITY.</h1>
+            <p class="text-xl text-gray-200 mb-8 max-w-2xl mx-auto" data-i18n="hero_desc">Reliable international air freight solutions backed by over 20 years of logistics experience.</p>
+            <a href="#contact" class="bg-ruby hover:bg-ruby-dark text-white px-8 py-3 rounded font-bold uppercase transition-all-300" data-i18n="btn_book">Book Your Shipment</a>
         </div>
+    </section>
 
-        <div class="container mx-auto px-4 relative z-10 grid lg:grid-cols-2 gap-12 items-center pt-10">
-            <div class="text-white">
-                <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight" data-i18n="hero_title">
-                    YOUR CARGO. OUR PRIORITY. WORLDWIDE.
-                </h1>
-                <p class="text-lg lg:text-xl text-gray-200 mb-8 max-w-lg" data-i18n="hero_desc">
-                    Reliable international air freight solutions backed by over 20 years of logistics experience. Official representative of Ural Airlines in Armenia.
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#contact" class="bg-ruby hover:bg-ruby-dark text-white px-8 py-3 rounded font-bold uppercase transition-all-300" data-i18n="btn_book">
-                        Book Your Shipment
-                    </a>
-                    <a href="#services" class="bg-transparent border-2 border-white hover:bg-white hover:text-navy text-white px-8 py-3 rounded font-bold uppercase transition-all-300">
-                        Explore Services
-                    </a>
-                </div>
-            </div>
-
-            <!-- BOOKING PANEL -->
-            <div class="bg-white p-8 rounded-lg shadow-2xl border-t-4 border-ruby">
-                <h3 class="text-2xl font-bold text-navy mb-6" data-i18n="book_title">Plan Your Shipment</h3>
-                <form class="space-y-4" onsubmit="event.preventDefault(); alert('Quote request sent!');">
-                    <div class="grid grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-xs font-bold text-text-secondary uppercase mb-1">Origin</label>
-                            <input type="text" placeholder="City / Airport" class="w-full bg-cool-grey border border-border-grey rounded p-3 text-sm focus:border-ruby outline-none">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-text-secondary uppercase mb-1">Destination</label>
-                            <input type="text" placeholder="City / Airport" class="w-full bg-cool-grey border border-border-grey rounded p-3 text-sm focus:border-ruby outline-none">
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-xs font-bold text-text-secondary uppercase mb-1">Weight (kg)</label>
-                            <input type="number" class="w-full bg-cool-grey border border-border-grey rounded p-3 text-sm focus:border-ruby outline-none">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-text-secondary uppercase mb-1">Type</label>
-                            <select class="w-full bg-cool-grey border border-border-grey rounded p-3 text-sm focus:border-ruby outline-none">
-                                <option>General Cargo</option>
-                                <option>Dangerous Goods</option>
-                                <option>Perishable</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button type="submit" class="w-full bg-navy hover:bg-midnight text-white py-3 rounded font-bold uppercase transition-all-300 mt-4">
-                        Calculate Cost
-                    </button>
-                </form>
+    <!-- FLIGHT SCHEDULE -->
+    <section id="schedule" class="py-16 bg-cool-grey">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-navy mb-8 text-center" data-i18n="schedule_title">FLIGHT SCHEDULE</h2>
+            <div class="overflow-x-auto bg-white rounded-lg shadow-lg">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-navy text-white uppercase text-sm">
+                            <th class="p-4">Airline</th>
+                            <th class="p-4">Route</th>
+                            <th class="p-4">Frequency</th>
+                            <th class="p-4">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm text-navy">
+                        <tr class="border-b border-border-grey">
+                            <td class="p-4 font-bold">URAL AIRLINES</td>
+                            <td class="p-4">Moscow (VKO) – Yerevan (EVN)</td>
+                            <td class="p-4">Daily</td>
+                            <td class="p-4"><span class="text-green-600 font-bold">Active</span></td>
+                        </tr>
+                        <tr class="border-b border-border-grey">
+                            <td class="p-4 font-bold">URAL AIRLINES</td>
+                            <td class="p-4">Yekaterinburg (SVX) – Yerevan (EVN)</td>
+                            <td class="p-4">3x Weekly</td>
+                            <td class="p-4"><span class="text-green-600 font-bold">Active</span></td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-bold">HAYWAYS LLC</td>
+                            <td class="p-4">Charter / Cargo Flights</td>
+                            <td class="p-4">On Demand</td>
+                            <td class="p-4"><span class="text-ruby font-bold">Inquire</span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
@@ -178,35 +160,22 @@
     <!-- SERVICES -->
     <section id="services" class="py-20 bg-white">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-navy mb-4" data-i18n="services_title">OUR SERVICES</h2>
-                <div class="w-16 h-1 bg-ruby mx-auto"></div>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="p-8 border border-border-grey rounded hover:shadow-xl transition-all-300 group">
-                    <div class="w-14 h-14 bg-cool-grey rounded-full flex items-center justify-center text-ruby text-2xl mb-6 group-hover:bg-ruby group-hover:text-white transition-all-300">
-                        <i class="fa-solid fa-plane"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-navy mb-3">Air Freight</h3>
-                    <p class="text-text-secondary text-sm">International air cargo transportation through available airline routes.</p>
+            <h2 class="text-3xl font-bold text-navy mb-12 text-center" data-i18n="services_title">OUR SERVICES</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 border rounded hover:shadow-lg transition">
+                    <i class="fa-solid fa-plane text-3xl text-ruby mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Air Freight</h3>
+                    <p class="text-sm text-text-secondary">Global connectivity through Ural Airlines and Hayways LLC.</p>
                 </div>
-                <!-- Card 2 -->
-                <div class="p-8 border border-border-grey rounded hover:shadow-xl transition-all-300 group">
-                    <div class="w-14 h-14 bg-cool-grey rounded-full flex items-center justify-center text-ruby text-2xl mb-6 group-hover:bg-ruby group-hover:text-white transition-all-300">
-                        <i class="fa-solid fa-box-open"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-navy mb-3">Special Cargo</h3>
-                    <p class="text-text-secondary text-sm">Customized transportation for complex and high-value cargo.</p>
+                <div class="p-6 border rounded hover:shadow-lg transition">
+                    <i class="fa-solid fa-triangle-exclamation text-3xl text-ruby mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Dangerous Goods</h3>
+                    <p class="text-sm text-text-secondary">Certified handling and documentation for regulated cargo.</p>
                 </div>
-                <!-- Card 3 -->
-                <div class="p-8 border border-border-grey rounded hover:shadow-xl transition-all-300 group">
-                    <div class="w-14 h-14 bg-cool-grey rounded-full flex items-center justify-center text-ruby text-2xl mb-6 group-hover:bg-ruby group-hover:text-white transition-all-300">
-                        <i class="fa-solid fa-triangle-exclamation"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-navy mb-3">Dangerous Goods</h3>
-                    <p class="text-text-secondary text-sm">Professional coordination for regulated dangerous goods shipments.</p>
+                <div class="p-6 border rounded hover:shadow-lg transition">
+                    <i class="fa-solid fa-car text-3xl text-ruby mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Special Cargo</h3>
+                    <p class="text-sm text-text-secondary">High-value transportation including automotive logistics.</p>
                 </div>
             </div>
         </div>
@@ -217,99 +186,97 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-navy mb-12 text-center">AIRLINE PARTNERS</h2>
             <div class="grid md:grid-cols-2 gap-8">
-                <!-- Ural -->
-                <div class="bg-white p-8 rounded shadow-sm">
-                    <div class="h-20 w-full mb-6 img-placeholder">URAL AIRLINES LOGO</div>
-                    <h3 class="text-xl font-bold text-navy">Official Representative</h3>
-                    <p class="text-sm text-text-secondary mt-2">Moscow – Yerevan | Yekaterinburg – Yerevan</p>
+                <div class="bg-white p-8 rounded shadow-sm text-center">
+                    <!-- REPLACE WITH: <img src="assets/ural.jpg" class="h-20 mx-auto mb-4"> -->
+                    <div class="h-20 w-full mb-4 img-placeholder">URAL LOGO</div>
+                    <h3 class="font-bold">Official Representative</h3>
                 </div>
-                <!-- Hayways -->
-                <div class="bg-white p-8 rounded shadow-sm">
-                    <div class="h-20 w-full mb-6 img-placeholder">HAYWAYS LLC LOGO</div>
-                    <h3 class="text-xl font-bold text-navy">Strategic Cooperation</h3>
-                    <p class="text-sm text-text-secondary mt-2">Armenian Cargo Airline Solutions</p>
+                <div class="bg-white p-8 rounded shadow-sm text-center">
+                    <!-- REPLACE WITH: <img src="assets/hayways.jpg" class="h-20 mx-auto mb-4"> -->
+                    <div class="h-20 w-full mb-4 img-placeholder">HAYWAYS LOGO</div>
+                    <h3 class="font-bold">Strategic Cooperation</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- EXPERIENCE / CASE STUDIES -->
-    <section id="experience" class="py-20 bg-white">
+    <!-- EXPERIENCE -->
+    <section class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-navy mb-12 text-center">OUR EXPERIENCE</h2>
-            
             <div class="grid lg:grid-cols-2 gap-12">
-                <!-- Case Study 1 -->
-                <div class="bg-cool-grey rounded-lg overflow-hidden shadow-lg">
-                    <!-- REPLACE WITH: <img src="assets/cargo-general.jpg" class="w-full h-64 object-cover"> -->
-                    <div class="w-full h-64 img-placeholder">UPLOAD CARGO OPERATION IMAGE</div>
-                    <div class="p-8">
-                        <h3 class="text-xl font-bold text-navy mb-2">COVID-19 Logistics Operation</h3>
-                        <p class="text-text-secondary mb-4">Successfully organized the export of approximately 3,000 kg of catalytic converters from Armenia to the United States during global disruptions.</p>
+                <div class="bg-cool-grey rounded-lg overflow-hidden">
+                    <!-- REPLACE WITH: <img src="assets/covid.jpg" class="w-full h-64 object-cover"> -->
+                    <div class="h-64 img-placeholder">UPLOAD CATALYTIC CONVERTER IMAGE</div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg">COVID-19 Logistics</h3>
+                        <p class="text-sm text-text-secondary mt-2">Export of 3,000 kg of catalytic converters from Armenia to USA.</p>
                     </div>
                 </div>
-
-                <!-- Case Study 2: Ferrari -->
-                <div class="bg-cool-grey rounded-lg overflow-hidden shadow-lg">
+                <div class="bg-cool-grey rounded-lg overflow-hidden">
                     <!-- REPLACE WITH: <img src="assets/ferrari.jpg" class="w-full h-64 object-cover"> -->
-                    <div class="w-full h-64 img-placeholder">UPLOAD FERRARI TRANSPORTATION IMAGE</div>
-                    <div class="p-8">
-                        <h3 class="text-xl font-bold text-navy mb-2">Precision High-Value Transport</h3>
-                        <p class="text-text-secondary mb-4">Organized transportation of Ferrari vehicles between Russia and Armenia, demonstrating expertise in high-value cargo handling.</p>
+                    <div class="h-64 img-placeholder">UPLOAD FERRARI IMAGE</div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg">High-Value Transport</h3>
+                        <p class="text-sm text-text-secondary mt-2">Transportation of Ferrari vehicles between Russia and Armenia.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT & CALCULATOR -->
+    <!-- CONTACT SECTION -->
     <section id="contact" class="py-20 bg-navy text-white">
         <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto bg-white text-navy rounded-lg shadow-2xl overflow-hidden">
-                <div class="p-8 lg:p-12">
-                    <h2 class="text-3xl font-bold mb-2">REQUEST A QUOTE</h2>
-                    <p class="text-text-secondary mb-8">Fill out the details below and our team will contact you.</p>
+            <div class="grid lg:grid-cols-2 gap-12">
+                
+                <!-- Contact Info -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-6" data-i18n="contact_title">CONTACT US</h2>
+                    <div class="space-y-6 text-lg">
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-location-dot text-ruby mt-1"></i>
+                            <div>
+                                <p class="font-bold text-white">Address:</p>
+                                <p class="text-gray-300">Zvartnots Cargo Complex, Armenia</p>
+                                <p class="text-gray-300">Զվարթնոց բեռնային համալիր</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fa-solid fa-phone text-ruby"></i>
+                            <a href="tel:+37441540045" class="hover:text-ruby transition">+374 41 54 00 45</a>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fa-solid fa-envelope text-ruby"></i>
+                            <a href="mailto:cargoserviceLLC@gmail.com" class="hover:text-ruby transition">cargoserviceLLC@gmail.com</a>
+                        </div>
+                    </div>
                     
-                    <form id="quote-form" class="space-y-6">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-xs font-bold text-text-secondary uppercase mb-1">Full Name</label>
-                                <input type="text" required class="w-full bg-cool-grey border border-border-grey rounded p-3">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-bold text-text-secondary uppercase mb-1">Email Address</label>
-                                <input type="email" required class="w-full bg-cool-grey border border-border-grey rounded p-3">
-                            </div>
+                    <!-- Map Placeholder -->
+                    <div class="mt-8 h-64 bg-gray-700 rounded flex items-center justify-center border border-gray-600">
+                        <span class="text-gray-400">Google Maps Integration Placeholder</span>
+                    </div>
+                </div>
+
+                <!-- Quote Form -->
+                <div class="bg-white text-navy p-8 rounded-lg shadow-2xl">
+                    <h3 class="text-2xl font-bold mb-6">REQUEST A QUOTE</h3>
+                    <form id="quote-form" class="space-y-4">
+                        <input type="text" placeholder="Full Name" required class="w-full bg-cool-grey border p-3 rounded">
+                        <input type="email" placeholder="Email Address" required class="w-full bg-cool-grey border p-3 rounded">
+                        
+                        <div class="grid grid-cols-3 gap-2">
+                            <input type="number" id="calc-l" placeholder="L (cm)" class="w-full bg-cool-grey border p-3 rounded">
+                            <input type="number" id="calc-w" placeholder="W (cm)" class="w-full bg-cool-grey border p-3 rounded">
+                            <input type="number" id="calc-h" placeholder="H (cm)" class="w-full bg-cool-grey border p-3 rounded">
+                        </div>
+                        
+                        <div class="bg-ruby/10 p-3 rounded text-center">
+                            Vol. Weight: <span id="vol-result" class="font-bold text-ruby">0</span> kg
                         </div>
 
-                        <div class="grid md:grid-cols-3 gap-6">
-                            <div>
-                                <label class="block text-xs font-bold text-text-secondary uppercase mb-1">Length (cm)</label>
-                                <input type="number" id="calc-l" class="w-full bg-cool-grey border border-border-grey rounded p-3">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-bold text-text-secondary uppercase mb-1">Width (cm)</label>
-                                <input type="number" id="calc-w" class="w-full bg-cool-grey border border-border-grey rounded p-3">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-bold text-text-secondary uppercase mb-1">Height (cm)</label>
-                                <input type="number" id="calc-h" class="w-full bg-cool-grey border border-border-grey rounded p-3">
-                            </div>
-                        </div>
-
-                        <div class="bg-ruby/10 p-4 rounded border border-ruby/20">
-                            <p class="font-bold text-navy">Calculated Volumetric Weight: <span id="vol-result" class="text-ruby">0</span> kg</p>
-                            <p class="text-xs text-text-secondary mt-1">Formula: (L x W x H) / 6000</p>
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-bold text-text-secondary uppercase mb-1">Message / Details</label>
-                            <textarea rows="4" class="w-full bg-cool-grey border border-border-grey rounded p-3"></textarea>
-                        </div>
-
-                        <button type="submit" class="w-full bg-ruby hover:bg-ruby-dark text-white py-4 rounded font-bold uppercase transition-all-300">
-                            Send Inquiry
-                        </button>
+                        <textarea placeholder="Message details..." class="w-full bg-cool-grey border p-3 rounded h-24"></textarea>
+                        <button type="submit" class="w-full bg-ruby text-white py-3 rounded font-bold uppercase hover:bg-ruby-dark">Send Inquiry</button>
                     </form>
                 </div>
             </div>
@@ -317,87 +284,80 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-midnight text-white py-12 border-t border-gray-700">
-        <div class="container mx-auto px-4 text-center">
-            <p class="mb-4">&copy; 2026 CARGO SERVICE LLC. All rights reserved.</p>
-            <p class="text-sm text-gray-400">Official Representative of URAL AIRLINES in Armenia.</p>
-        </div>
+    <footer class="bg-midnight text-white py-8 text-center border-t border-gray-700">
+        <p>&copy; 2026 CARGO SERVICE LLC. Official Representative of URAL AIRLINES.</p>
     </footer>
 
     <!-- JAVASCRIPT -->
     <script>
-        // Language Data
+        // FULL TRANSLATIONS INCLUDING MARQUEE
         const translations = {
             en: {
-                nav_home: "HOME", nav_services: "SERVICES", nav_partners: "PARTNERS", nav_exp: "EXPERIENCE", nav_contact: "CONTACT",
+                nav_home: "HOME", nav_schedule: "FLIGHT SCHEDULE", nav_services: "SERVICES", nav_partners: "PARTNERS", nav_contact: "CONTACT",
                 btn_quote: "Request a Quote",
-                hero_title: "YOUR CARGO. OUR PRIORITY. WORLDWIDE.",
+                hero_title: "YOUR CARGO. OUR PRIORITY.",
                 hero_desc: "Reliable international air freight solutions backed by over 20 years of logistics experience.",
                 btn_book: "Book Your Shipment",
-                book_title: "Plan Your Shipment",
-                services_title: "OUR SERVICES"
+                services_title: "OUR SERVICES",
+                schedule_title: "FLIGHT SCHEDULE",
+                contact_title: "CONTACT US",
+                marquee: "⚠️ HURRY UP TO BOOK YOUR SPOT - LIMITED AVAILABILITY"
             },
             ru: {
-                nav_home: "ГЛАВНАЯ", nav_services: "УСЛУГИ", nav_partners: "ПАРТНЕРЫ", nav_exp: "ОПЫТ", nav_contact: "КОНТАКТЫ",
+                nav_home: "ГЛАВНАЯ", nav_schedule: "РАСПИСАНИЕ", nav_services: "УСЛУГИ", nav_partners: "ПАРТНЕРЫ", nav_contact: "КОНТАКТЫ",
                 btn_quote: "Запросить цену",
-                hero_title: "ВАШ ГРУЗ. НАШ ПРИОРИТЕТ. ПО ВСЕМУ МИРУ.",
-                hero_desc: "Надежные международные авиагрузовые решения, подтвержденные 20-летним опытом.",
-                btn_book: "Забронировать отправку",
-                book_title: "Планируйте отправку",
-                services_title: "НАШИ УСЛУГИ"
+                hero_title: "ВАШ ГРУЗ. НАШ ПРИОРИТЕТ.",
+                hero_desc: "Надежные международные авиагрузовые решения с 20-летним опытом.",
+                btn_book: "Забронировать",
+                services_title: "НАШИ УСЛУГИ",
+                schedule_title: "РАСПИСАНИЕ РЕЙСОВ",
+                contact_title: "СВЯЗАТЬСЯ С НАМИ",
+                marquee: "⚠️ УСПЕЙТЕ ЗАБРОНИРОВАТЬ МЕСТО - ОГРАНИЧЕННЫЕ ВОЗМОЖНОСТИ"
             },
             hy: {
-                nav_home: "ԳԼԽԱՎՈՐ", nav_services: "ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐ", nav_partners: "ԳՈՐԾԸՆԿԵՐՆԵՐ", nav_exp: "ՓՈՐՁ", nav_contact: "ԿԱՊ",
+                nav_home: "ԳԼԽԱՎՈՐ", nav_schedule: "ԹՌԻՉՔՆԵՐ", nav_services: "ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐ", nav_partners: "ԳՈՐԾԸՆԿԵՐՆԵՐ", nav_contact: "ԿԱՊ",
                 btn_quote: "Պատվերել գինը",
-                hero_title: "ՁԵՐ ԲԵՌԸ։ ՄԵՐ ԱՌԱՋՆՈՐԴՈՒԹՅՈՒՆԸ։ ԱՇԽԱՐՀՈՒՄ։",
-                hero_desc: "Վստահելի միջազգային ավիաբեռնափոխադրումներ՝ հիմնված 20 տարվա փորձի վրա։",
+                hero_title: "ՁԵՐ ԲԵՌԸ։ ՄԵՐ ԱՌԱՋՆՈՐԴՈՒԹՅՈՒՆԸ։",
+                hero_desc: "Վստահելի միջազգային ավիաբեռնափոխադրումներ՝ 20 տարվա փորձով։",
                 btn_book: "Ամրագրել բեռը",
-                book_title: "Պլանավորեք ձեր առաքումը",
-                services_title: "ՄԵՐ ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐԸ"
+                services_title: "ՄԵՐ ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐԸ",
+                schedule_title: "ԹՌԻՉՔՆԵՐԻ ԺԱՄԱՆԱԿԱՑՈՒՅՑ",
+                contact_title: "ԿԱՊ ՄԵԶ ՀԵՏ",
+                marquee: "⚠️ ՇՏԱՊԻՐ ՈՐ ՀԱՍՑՆԵՍ ԱՄՐԱԳՐԵԼ ՔՈ ՏԵՂԸ - ՍԱՀՄԱՆԱՓԱԿ ՀՆԱՐԱՎՈՐՈՒԹՅՈՒՆՆԵՐ"
             }
         };
 
         // Language Switcher Logic
         document.getElementById('lang-selector').addEventListener('change', function(e) {
             const lang = e.target.value;
-            const elements = document.querySelectorAll('[data-i18n]');
             
-            elements.forEach(el => {
+            // Update Text Elements
+            document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                if (translations[lang][key]) {
-                    el.textContent = translations[lang][key];
-                }
+                if (translations[lang][key]) el.textContent = translations[lang][key];
             });
-        });
 
-        // Calculator Logic
-        const inputs = ['calc-l', 'calc-w', 'calc-h'];
-        inputs.forEach(id => {
-            const el = document.getElementById(id);
-            if(el) {
-                el.addEventListener('input', calculateVolumetric);
+            // Update Marquee Text Specifically
+            const marqueeEl = document.getElementById('marquee-text');
+            if(marqueeEl && translations[lang].marquee) {
+                marqueeEl.textContent = translations[lang].marquee;
             }
         });
 
-        function calculateVolumetric() {
-            const l = parseFloat(document.getElementById('calc-l')?.value) || 0;
-            const w = parseFloat(document.getElementById('calc-w')?.value) || 0;
-            const h = parseFloat(document.getElementById('calc-h')?.value) || 0;
-            
-            const volWeight = (l * w * h) / 6000;
-            const resultEl = document.getElementById('vol-result');
-            if(resultEl) resultEl.innerText = volWeight.toFixed(2);
-        }
-
-        // Form Handler
-        const quoteForm = document.getElementById('quote-form');
-        if(quoteForm) {
-            quoteForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert("Thank you! Your inquiry has been sent to our logistics team.");
-                this.reset();
+        // Calculator Logic
+        ['calc-l', 'calc-w', 'calc-h'].forEach(id => {
+            document.getElementById(id).addEventListener('input', () => {
+                const l = parseFloat(document.getElementById('calc-l').value) || 0;
+                const w = parseFloat(document.getElementById('calc-w').value) || 0;
+                const h = parseFloat(document.getElementById('calc-h').value) || 0;
+                document.getElementById('vol-result').innerText = ((l * w * h) / 6000).toFixed(2);
             });
-        }
+        });
+
+        document.getElementById('quote-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert("Inquiry sent to cargoserviceLLC@gmail.com");
+        });
     </script>
 </body>
 </html>
