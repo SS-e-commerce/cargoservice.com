@@ -43,14 +43,15 @@
         .marquee-content { 
             display: inline-block; 
             animation: marquee 25s linear infinite; 
-            padding-left: 100%; /* Start from outside */
+            padding-left: 100%;
         }
         @keyframes marquee { 
             0% { transform: translateX(0); } 
             100% { transform: translateX(-100%); } 
         }
 
-        /* Image Placeholder Style */
+        /* Image Styles */
+        img { display: block; width: 100%; height: auto; }
         .img-placeholder {
             background-color: #e5e7eb;
             display: flex; align-items: center; justify-content: center;
@@ -61,10 +62,10 @@
 </head>
 <body class="text-navy bg-white">
 
-    <!-- RUNNING LINE (DYNAMIC BY LANGUAGE) -->
+    <!-- RUNNING LINE -->
     <div class="bg-ruby text-white py-2 marquee-container font-bold uppercase text-sm tracking-wider">
         <div id="marquee-text" class="marquee-content">
-            HURRY UP TO BOOK YOUR SPOT LIMITED AVAILABILITY
+            HURRY UP TO BOOK YOUR SPOT - LIMITED AVAILABILITY
         </div>
     </div>
 
@@ -72,8 +73,9 @@
     <header class="sticky top-0 z-50 bg-white border-b border-border-grey shadow-sm">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <a href="#" class="flex items-center gap-3">
-                <!-- REPLACE WITH: <img src="assets/logo.png" class="h-12"> -->
-                <div class="h-12 w-40 img-placeholder rounded text-xs border-none bg-transparent">LOGO HERE</div>
+                <!-- LOGO IMAGE -->
+                <img src="assets/logo.png" alt="Cargo Service Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="h-12 w-auto">
+                <div class="h-12 w-40 img-placeholder rounded text-xs border-none bg-transparent hidden">LOGO MISSING</div>
             </a>
 
             <nav class="hidden lg:flex items-center gap-8 font-medium text-sm">
@@ -108,8 +110,9 @@
 
     <!-- HERO SECTION -->
     <section id="home" class="relative h-[600px] flex items-center bg-navy overflow-hidden">
-        <!-- REPLACE WITH: <img src="assets/hero.jpg" class="absolute inset-0 w-full h-full object-cover opacity-40"> -->
-        <div class="absolute inset-0 img-placeholder opacity-20 border-none bg-navy">UPLOAD HERO IMAGE (assets/hero.jpg)</div>
+        <!-- HERO IMAGE -->
+        <img src="assets/hero.jpg" alt="Cargo Plane" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="absolute inset-0 w-full h-full object-cover opacity-40">
+        <div class="absolute inset-0 img-placeholder opacity-20 border-none bg-navy hidden">UPLOAD assets/hero.jpg</div>
         
         <div class="container mx-auto px-4 relative z-10 text-center text-white">
             <h1 class="text-4xl lg:text-6xl font-bold mb-6" data-i18n="hero_title">YOUR CARGO. OUR PRIORITY.</h1>
@@ -187,13 +190,13 @@
             <h2 class="text-3xl font-bold text-navy mb-12 text-center">AIRLINE PARTNERS</h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="bg-white p-8 rounded shadow-sm text-center">
-                    <!-- REPLACE WITH: <img src="assets/ural.jpg" class="h-20 mx-auto mb-4"> -->
-                    <div class="h-20 w-full mb-4 img-placeholder">URAL LOGO</div>
+                    <img src="assets/ural.jpg" alt="Ural Airlines" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="h-20 mx-auto mb-4 object-contain">
+                    <div class="h-20 w-full mb-4 img-placeholder hidden">UPLOAD assets/ural.jpg</div>
                     <h3 class="font-bold">Official Representative</h3>
                 </div>
                 <div class="bg-white p-8 rounded shadow-sm text-center">
-                    <!-- REPLACE WITH: <img src="assets/hayways.jpg" class="h-20 mx-auto mb-4"> -->
-                    <div class="h-20 w-full mb-4 img-placeholder">HAYWAYS LOGO</div>
+                    <img src="assets/hayways.jpg" alt="Hayways" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="h-20 mx-auto mb-4 object-contain">
+                    <div class="h-20 w-full mb-4 img-placeholder hidden">UPLOAD assets/hayways.jpg</div>
                     <h3 class="font-bold">Strategic Cooperation</h3>
                 </div>
             </div>
@@ -206,16 +209,16 @@
             <h2 class="text-3xl font-bold text-navy mb-12 text-center">OUR EXPERIENCE</h2>
             <div class="grid lg:grid-cols-2 gap-12">
                 <div class="bg-cool-grey rounded-lg overflow-hidden">
-                    <!-- REPLACE WITH: <img src="assets/covid.jpg" class="w-full h-64 object-cover"> -->
-                    <div class="h-64 img-placeholder">UPLOAD CATALYTIC CONVERTER IMAGE</div>
+                    <img src="assets/covid.jpg" alt="Logistics" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="w-full h-64 object-cover">
+                    <div class="h-64 img-placeholder hidden">UPLOAD assets/covid.jpg</div>
                     <div class="p-6">
                         <h3 class="font-bold text-lg">COVID-19 Logistics</h3>
                         <p class="text-sm text-text-secondary mt-2">Export of 3,000 kg of catalytic converters from Armenia to USA.</p>
                     </div>
                 </div>
                 <div class="bg-cool-grey rounded-lg overflow-hidden">
-                    <!-- REPLACE WITH: <img src="assets/ferrari.jpg" class="w-full h-64 object-cover"> -->
-                    <div class="h-64 img-placeholder">UPLOAD FERRARI IMAGE</div>
+                    <img src="assets/ferrari.jpg" alt="Ferrari" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="w-full h-64 object-cover">
+                    <div class="h-64 img-placeholder hidden">UPLOAD assets/ferrari.jpg</div>
                     <div class="p-6">
                         <h3 class="font-bold text-lg">High-Value Transport</h3>
                         <p class="text-sm text-text-secondary mt-2">Transportation of Ferrari vehicles between Russia and Armenia.</p>
@@ -237,7 +240,7 @@
                         <div class="flex items-start gap-4">
                             <i class="fa-solid fa-location-dot text-ruby mt-1"></i>
                             <div>
-                                <p class="font-bold text-white">Address:</p>
+                                <p class="font-bold text-white" data-i18n="lbl_address">Address:</p>
                                 <p class="text-gray-300">Zvartnots Cargo Complex, Armenia</p>
                                 <p class="text-gray-300">Զվարթնոց բեռնային համալիր</p>
                             </div>
@@ -260,10 +263,10 @@
 
                 <!-- Quote Form -->
                 <div class="bg-white text-navy p-8 rounded-lg shadow-2xl">
-                    <h3 class="text-2xl font-bold mb-6">REQUEST A QUOTE</h3>
+                    <h3 class="text-2xl font-bold mb-6" data-i18n="form_title">REQUEST A QUOTE</h3>
                     <form id="quote-form" class="space-y-4">
-                        <input type="text" placeholder="Full Name" required class="w-full bg-cool-grey border p-3 rounded">
-                        <input type="email" placeholder="Email Address" required class="w-full bg-cool-grey border p-3 rounded">
+                        <input type="text" data-i18n-ph="ph_name" placeholder="Full Name" required class="w-full bg-cool-grey border p-3 rounded">
+                        <input type="email" data-i18n-ph="ph_email" placeholder="Email Address" required class="w-full bg-cool-grey border p-3 rounded">
                         
                         <div class="grid grid-cols-3 gap-2">
                             <input type="number" id="calc-l" placeholder="L (cm)" class="w-full bg-cool-grey border p-3 rounded">
@@ -272,11 +275,11 @@
                         </div>
                         
                         <div class="bg-ruby/10 p-3 rounded text-center">
-                            Vol. Weight: <span id="vol-result" class="font-bold text-ruby">0</span> kg
+                            <span data-i18n="lbl_vol">Vol. Weight:</span> <span id="vol-result" class="font-bold text-ruby">0</span> kg
                         </div>
 
-                        <textarea placeholder="Message details..." class="w-full bg-cool-grey border p-3 rounded h-24"></textarea>
-                        <button type="submit" class="w-full bg-ruby text-white py-3 rounded font-bold uppercase hover:bg-ruby-dark">Send Inquiry</button>
+                        <textarea data-i18n-ph="ph_msg" placeholder="Message details..." class="w-full bg-cool-grey border p-3 rounded h-24"></textarea>
+                        <button type="submit" class="w-full bg-ruby text-white py-3 rounded font-bold uppercase hover:bg-ruby-dark" data-i18n="btn_send">Send Inquiry</button>
                     </form>
                 </div>
             </div>
@@ -290,7 +293,7 @@
 
     <!-- JAVASCRIPT -->
     <script>
-        // FULL TRANSLATIONS INCLUDING MARQUEE
+        // FULL TRANSLATIONS DICTIONARY
         const translations = {
             en: {
                 nav_home: "HOME", nav_schedule: "FLIGHT SCHEDULE", nav_services: "SERVICES", nav_partners: "PARTNERS", nav_contact: "CONTACT",
@@ -301,7 +304,15 @@
                 services_title: "OUR SERVICES",
                 schedule_title: "FLIGHT SCHEDULE",
                 contact_title: "CONTACT US",
-                marquee: "⚠️ HURRY UP TO BOOK YOUR SPOT - LIMITED AVAILABILITY"
+                lbl_address: "Address:",
+                form_title: "REQUEST A QUOTE",
+                lbl_vol: "Vol. Weight:",
+                btn_send: "Send Inquiry",
+                marquee: "⚠️ HURRY UP TO BOOK YOUR SPOT - LIMITED AVAILABILITY",
+                // Placeholders
+                ph_name: "Full Name",
+                ph_email: "Email Address",
+                ph_msg: "Message details..."
             },
             ru: {
                 nav_home: "ГЛАВНАЯ", nav_schedule: "РАСПИСАНИЕ", nav_services: "УСЛУГИ", nav_partners: "ПАРТНЕРЫ", nav_contact: "КОНТАКТЫ",
@@ -312,7 +323,15 @@
                 services_title: "НАШИ УСЛУГИ",
                 schedule_title: "РАСПИСАНИЕ РЕЙСОВ",
                 contact_title: "СВЯЗАТЬСЯ С НАМИ",
-                marquee: "⚠️ УСПЕЙТЕ ЗАБРОНИРОВАТЬ МЕСТО - ОГРАНИЧЕННЫЕ ВОЗМОЖНОСТИ"
+                lbl_address: "Адрес:",
+                form_title: "ЗАПРОСИТЬ ЦЕНУ",
+                lbl_vol: "Объемный вес:",
+                btn_send: "Отправить запрос",
+                marquee: "⚠️ УСПЕЙТЕ ЗАБРОНИРОВАТЬ МЕСТО - ОГРАНИЧЕННЫЕ ВОЗМОЖНОСТИ",
+                // Placeholders
+                ph_name: "ФИО",
+                ph_email: "Электронная почта",
+                ph_msg: "Детали сообщения..."
             },
             hy: {
                 nav_home: "ԳԼԽԱՎՈՐ", nav_schedule: "ԹՌԻՉՔՆԵՐ", nav_services: "ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐ", nav_partners: "ԳՈՐԾԸՆԿԵՐՆԵՐ", nav_contact: "ԿԱՊ",
@@ -323,7 +342,15 @@
                 services_title: "ՄԵՐ ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐԸ",
                 schedule_title: "ԹՌԻՉՔՆԵՐԻ ԺԱՄԱՆԱԿԱՑՈՒՅՑ",
                 contact_title: "ԿԱՊ ՄԵԶ ՀԵՏ",
-                marquee: "⚠️ ՇՏԱՊԻՐ ՈՐ ՀԱՍՑՆԵՍ ԱՄՐԱԳՐԵԼ ՔՈ ՏԵՂԸ - ՍԱՀՄԱՆԱՓԱԿ ՀՆԱՐԱՎՈՐՈՒԹՅՈՒՆՆԵՐ"
+                lbl_address: "Հասցե:",
+                form_title: "ՊԱՏՎԵՐԵԼ ԳԻՆԸ",
+                lbl_vol: "Ծավալային քաշ:",
+                btn_send: "Ուղարկել հարցումը",
+                marquee: "⚠️ ՇՏԱՊԻՐ ՈՐ ՀԱՍՑՆԵՍ ԱՄՐԱԳՐԵԼ ՔՈ ՏԵՂԸ - ՍԱՀՄԱՆԱՓԱԿ ՀՆԱՐԱՎՈՐՈՒԹՅՈՒՆՆԵՐ",
+                // Placeholders
+                ph_name: "Անուն Ազգանուն",
+                ph_email: "Էլ. հասցե",
+                ph_msg: "Հաղորդագրության մանրամասներ..."
             }
         };
 
@@ -331,13 +358,19 @@
         document.getElementById('lang-selector').addEventListener('change', function(e) {
             const lang = e.target.value;
             
-            // Update Text Elements
+            // Update Text Content
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[lang][key]) el.textContent = translations[lang][key];
             });
 
-            // Update Marquee Text Specifically
+            // Update Placeholders (Inputs)
+            document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+                const key = el.getAttribute('data-i18n-ph');
+                if (translations[lang][key]) el.placeholder = translations[lang][key];
+            });
+
+            // Update Marquee
             const marqueeEl = document.getElementById('marquee-text');
             if(marqueeEl && translations[lang].marquee) {
                 marqueeEl.textContent = translations[lang].marquee;
