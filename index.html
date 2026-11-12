@@ -72,9 +72,10 @@
     <!-- HEADER (COMPACT) -->
     <header class="sticky top-0 z-50 bg-white border-b border-border-grey shadow-sm">
         <div class="container mx-auto px-4 py-2.5 flex justify-between items-center">
-            <a href="#" class="flex items-center gap-3">
-                <!-- LOGO IMAGE -->
-                <img src="assets/logo.png" alt="Cargo Service Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="h-10 w-auto">
+            <!-- LOGO WITH HOME LINK -->
+            <a href="#home" class="flex items-center gap-3 hover:opacity-80 transition">
+                <!-- CHECK THIS PATH: assets/logo.png -->
+                <img src="assets/logo.png" alt="Cargo Service Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="h-10 w-auto object-contain">
                 <div class="h-10 w-32 img-placeholder rounded text-[10px] border-none bg-transparent hidden">LOGO MISSING</div>
             </a>
 
@@ -110,7 +111,7 @@
         </div>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION (ID="home") -->
     <section id="home" class="relative h-[550px] flex items-center bg-navy overflow-hidden">
         <img src="assets/hero.jpg" alt="Cargo Plane" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="absolute inset-0 w-full h-full object-cover opacity-40">
         <div class="absolute inset-0 img-placeholder opacity-20 border-none bg-navy hidden">UPLOAD assets/hero.jpg</div>
@@ -185,7 +186,7 @@
         </div>
     </section>
 
-    <!-- PARTNERS (UPDATED WITH NAMES) -->
+    <!-- PARTNERS -->
     <section id="partners" class="py-16 bg-cool-grey">
         <div class="container mx-auto px-4">
             <h2 class="text-2xl font-bold text-navy mb-10 text-center">AIRLINE PARTNERS</h2>
@@ -263,7 +264,6 @@
                         </div>
                         <div class="flex items-center gap-4">
                             <i class="fa-solid fa-envelope text-ruby"></i>
-                            <!-- UPDATED EMAIL HERE -->
                             <a href="mailto:evn.cargo.service@gmail.com" class="hover:text-ruby transition">evn.cargo.service@gmail.com</a>
                         </div>
                     </div>
@@ -381,7 +381,6 @@
 
         document.getElementById('quote-form').addEventListener('submit', (e) => {
             e.preventDefault();
-            // Updated email in alert as well
             alert("Inquiry sent to evn.cargo.service@gmail.com");
         });
     </script>
