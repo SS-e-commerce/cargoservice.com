@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO META TAGS -->
-    <title>CARGO SERVICE LLC | Air Freight Armenia - Ural Airlines Representative</title>
-    <meta name="description" content="CARGO SERVICE LLC has been providing reliable international air freight services since 2004. Official representative of Ural Airlines in Armenia. Dangerous goods transportation, shipments to Russia and the Urals regions.">
-    <meta name="keywords" content="Air Freight Armenia, Cargo Service LLC, Ural Airlines Armenia, Dangerous Goods Transport, Air Cargo Yerevan, Logistics Armenia, Shipments to Russia">
+    <title>CARGO SERVICE LLC | Air Freight to Russia - Ural Airlines Representative</title>
+    <meta name="description" content="CARGO SERVICE LLC provides reliable air freight from Armenia to Russia. Official representative of Ural Airlines. Dangerous goods transportation, shipments to Moscow, Yekaterinburg and Urals regions.">
+    <meta name="keywords" content="Air Freight Armenia to Russia, Cargo Service LLC, Ural Airlines Armenia, Dangerous Goods Transport, Air Cargo Yerevan to Moscow, Logistics Armenia, Shipments to Urals">
     <meta name="author" content="CARGO SERVICE LLC">
-    <meta property="og:title" content="CARGO SERVICE LLC | International Air Freight">
-    <meta property="og:description" content="Reliable air freight solutions since 2004. Official Ural Airlines representative.">
+    <meta property="og:title" content="CARGO SERVICE LLC | Air Freight to Russia">
+    <meta property="og:description" content="Reliable air freight solutions from Armenia to Russia since 2004. Official Ural Airlines representative.">
     <meta property="og:image" content="images/hero.jpg">
     
     <!-- Fonts & Icons -->
@@ -209,7 +209,7 @@
             <p class="text-center text-xs text-text-secondary mb-6" data-i18n="last_updated">Last updated: [DATE]</p>
             
             <div class="overflow-x-auto bg-white rounded-lg shadow-lg border border-border-grey">
-                <table class="w-full text-left border-collapse">
+                <table class="w-full text-left border-collapse" id="schedule-table">
                     <thead>
                         <tr class="bg-navy text-white uppercase text-xs">
                             <th class="p-3" data-i18n="th_airline">Airline</th>
@@ -222,24 +222,7 @@
                         </tr>
                     </thead>
                     <tbody class="text-xs text-navy">
-                        <tr class="border-b border-border-grey">
-                            <td class="p-3 font-bold">URAL AIRLINES</td>
-                            <td class="p-3">Moscow (VKO) – Yerevan (EVN)</td>
-                            <td class="p-3">Daily</td>
-                            <td class="p-3">10:00 AM</td>
-                            <td class="p-3">08:00 AM</td>
-                            <td class="p-3">~3h 30m</td>
-                            <td class="p-3"><span class="text-green-600 font-bold">Active</span></td>
-                        </tr>
-                        <tr class="border-b border-border-grey">
-                            <td class="p-3 font-bold">URAL AIRLINES</td>
-                            <td class="p-3">Yekaterinburg (SVX) – Yerevan (EVN)</td>
-                            <td class="p-3">3x Weekly</td>
-                            <td class="p-3">02:00 PM</td>
-                            <td class="p-3">12:00 PM</td>
-                            <td class="p-3">~3h 15m</td>
-                            <td class="p-3"><span class="text-green-600 font-bold">Active</span></td>
-                        </tr>
+                        <!-- Data will be injected by JS -->
                     </tbody>
                 </table>
             </div>
@@ -247,6 +230,9 @@
             <div class="mt-6 text-center">
                 <h3 class="font-bold text-sm text-navy mb-2" data-i18n="destinations_title">Main Destinations:</h3>
                 <p class="text-xs text-text-secondary">[CITIES]</p>
+                <a href="https://www.uralairlines.com/en/schedule" target="_blank" class="inline-block mt-3 text-xs text-ruby hover:text-navy underline font-bold">
+                    <i class="fa-solid fa-external-link-alt mr-1"></i> Check Official Ural Airlines Schedule
+                </a>
             </div>
         </div>
     </section>
@@ -474,18 +460,19 @@
                 <!-- Quote Form -->
                 <div class="bg-white text-navy p-6 rounded-lg shadow-2xl">
                     <h3 class="text-xl font-bold mb-4" data-i18n="form_title">REQUEST A QUOTE</h3>
-                    <form id="quote-form" class="space-y-3">
-                        <input type="text" data-i18n-ph="ph_name" placeholder="Full Name" required class="w-full bg-cool-grey border p-2 rounded text-sm">
-                        <input type="text" data-i18n-ph="ph_contact" placeholder="Email or Phone" required class="w-full bg-cool-grey border p-2 rounded text-sm">
+                    <!-- Replace YOUR_FORMSPREE_ID with your actual ID from formspree.io -->
+                    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="space-y-3">
+                        <input type="text" name="name" data-i18n-ph="ph_name" placeholder="Full Name" required class="w-full bg-cool-grey border p-2 rounded text-sm">
+                        <input type="text" name="contact" data-i18n-ph="ph_contact" placeholder="Email or Phone" required class="w-full bg-cool-grey border p-2 rounded text-sm">
                         
                         <div class="grid grid-cols-2 gap-2">
-                            <input type="text" data-i18n-ph="ph_origin" placeholder="Origin" class="w-full bg-cool-grey border p-2 rounded text-sm">
-                            <input type="text" data-i18n-ph="ph_destination" placeholder="Destination" class="w-full bg-cool-grey border p-2 rounded text-sm">
+                            <input type="text" name="origin" data-i18n-ph="ph_origin" placeholder="Origin" class="w-full bg-cool-grey border p-2 rounded text-sm">
+                            <input type="text" name="destination" value="Yerevan (EVN)" readonly class="w-full bg-gray-100 border p-2 rounded text-sm text-gray-500 cursor-not-allowed">
                         </div>
 
                         <div class="grid grid-cols-2 gap-2">
-                            <input type="number" id="calc-weight" placeholder="Weight (kg)" class="w-full bg-cool-grey border p-2 rounded text-sm">
-                            <select class="w-full bg-cool-grey border p-2 rounded text-sm">
+                            <input type="number" name="weight" id="calc-weight" placeholder="Weight (kg)" class="w-full bg-cool-grey border p-2 rounded text-sm">
+                            <select name="cargo_type" class="w-full bg-cool-grey border p-2 rounded text-sm">
                                 <option value="" disabled selected>Cargo Type</option>
                                 <option value="general">General Cargo</option>
                                 <option value="dangerous">Dangerous Goods</option>
@@ -494,9 +481,9 @@
                         </div>
 
                         <div class="grid grid-cols-3 gap-2">
-                            <input type="number" id="calc-l" placeholder="L (cm)" class="w-full bg-cool-grey border p-2 rounded text-sm">
-                            <input type="number" id="calc-w" placeholder="W (cm)" class="w-full bg-cool-grey border p-2 rounded text-sm">
-                            <input type="number" id="calc-h" placeholder="H (cm)" class="w-full bg-cool-grey border p-2 rounded text-sm">
+                            <input type="number" name="length" id="calc-l" placeholder="L (cm)" class="w-full bg-cool-grey border p-2 rounded text-sm">
+                            <input type="number" name="width" id="calc-w" placeholder="W (cm)" class="w-full bg-cool-grey border p-2 rounded text-sm">
+                            <input type="number" name="height" id="calc-h" placeholder="H (cm)" class="w-full bg-cool-grey border p-2 rounded text-sm">
                         </div>
                         
                         <div class="bg-ruby/10 p-2 rounded text-center text-xs">
@@ -504,11 +491,11 @@
                         </div>
 
                         <div class="flex items-center gap-2">
-                            <input type="checkbox" id="is-dg" class="accent-ruby">
+                            <input type="checkbox" name="is_dangerous" id="is-dg" class="accent-ruby">
                             <label for="is-dg" class="text-xs font-bold text-navy" data-i18n="lbl_is_dg">Dangerous Goods?</label>
                         </div>
 
-                        <textarea data-i18n-ph="ph_msg" placeholder="Message details..." class="w-full bg-cool-grey border p-2 rounded h-20 text-sm"></textarea>
+                        <textarea name="message" data-i18n-ph="ph_msg" placeholder="Message details..." class="w-full bg-cool-grey border p-2 rounded h-20 text-sm"></textarea>
                         <button type="submit" class="w-full bg-ruby text-white py-2 rounded font-bold uppercase hover:bg-ruby-dark text-sm" data-i18n="btn_send">Send Inquiry</button>
                     </form>
                 </div>
@@ -551,24 +538,17 @@
     <!-- JAVASCRIPT -->
     <script>
         // DOCUMENTS LIST CONFIGURATION
-        // Add new documents here. File name must match the file in docs/ folder.
         const documentsList = [
-            {
-                file: 'docs/ural-airlines-authorization.pdf',
-                title: { en: 'Ural Airlines Authorization', ru: 'Авторизация Ural Airlines', hy: 'Ural Airlines-ի լիազորություն' }
-            },
-            {
-                file: 'docs/dgr-training-certificate.pdf',
-                title: { en: 'DGR Training Certificate', ru: 'Сертификат DGR', hy: 'DGR վկայական' }
-            },
-            {
-                file: 'docs/company-registration.pdf',
-                title: { en: 'Company Registration', ru: 'Регистрация компании', hy: 'Ընկերության գրանցում' }
-            },
-            {
-                file: 'docs/insurance.pdf',
-                title: { en: 'Insurance Policy', ru: 'Страховой полис', hy: 'Ապահովագրական պոլիս' }
-            }
+            { file: 'docs/ural-airlines-authorization.pdf', title: { en: 'Ural Airlines Authorization', ru: 'Авторизация Ural Airlines', hy: 'Ural Airlines-ի լիազորություն' } },
+            { file: 'docs/dgr-training-certificate.pdf', title: { en: 'DGR Training Certificate', ru: 'Сертификат DGR', hy: 'DGR վկայական' } },
+            { file: 'docs/company-registration.pdf', title: { en: 'Company Registration', ru: 'Регистрация компании', hy: 'Ընկերության գրանցում' } },
+            { file: 'docs/insurance.pdf', title: { en: 'Insurance Policy', ru: 'Страховой полис', hy: 'Ապահովագրական պոլիս' } }
+        ];
+
+        // FLIGHT SCHEDULE DATA (To Russia)
+        const flightSchedule = [
+            { airline: "URAL AIRLINES", route: "Yerevan (EVN) – Moscow (VKO)", days: "Daily", dep: "14:00", cutoff: "12:00", transit: "~3h 30m", status: "Active" },
+            { airline: "URAL AIRLINES", route: "Yerevan (EVN) – Yekaterinburg (SVX)", days: "3x Weekly", dep: "10:00", cutoff: "08:00", transit: "~3h 15m", status: "Active" }
         ];
 
         // TRANSLATIONS DATA
@@ -733,7 +713,6 @@
             
             for (const doc of documentsList) {
                 try {
-                    // Check if file exists
                     const response = await fetch(doc.file, { method: 'HEAD' });
                     if (response.ok) {
                         const card = document.createElement('div');
@@ -746,9 +725,31 @@
                         grid.appendChild(card);
                     }
                 } catch (e) {
-                    console.log(`Document ${doc.file} not found or error checking.`);
+                    console.log(`Document ${doc.file} not found.`);
                 }
             }
+        }
+
+        // FLIGHT SCHEDULE RENDERER
+        function renderSchedule() {
+            const tableBody = document.querySelector('#schedule-table tbody');
+            const lang = document.getElementById('lang-selector').value;
+            
+            tableBody.innerHTML = '';
+            flightSchedule.forEach(flight => {
+                const row = document.createElement('tr');
+                row.className = "border-b border-border-grey";
+                row.innerHTML = `
+                    <td class="p-3 font-bold">${flight.airline}</td>
+                    <td class="p-3">${flight.route}</td>
+                    <td class="p-3">${flight.days}</td>
+                    <td class="p-3">${flight.dep}</td>
+                    <td class="p-3">${flight.cutoff}</td>
+                    <td class="p-3">${flight.transit}</td>
+                    <td class="p-3"><span class="text-green-600 font-bold">${flight.status}</span></td>
+                `;
+                tableBody.appendChild(row);
+            });
         }
 
         // CALCULATOR
@@ -759,11 +760,6 @@
                 const h = parseFloat(document.getElementById('calc-h').value) || 0;
                 document.getElementById('vol-result').innerText = ((l * w * h) / 6000).toFixed(2);
             });
-        });
-
-        document.getElementById('quote-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert("Inquiry sent to evn.cargo.service@gmail.com");
         });
 
         // CHATBOT LOGIC
@@ -780,30 +776,11 @@
 
             if (!text) return;
 
-            // User Message
             body.innerHTML += `<div class="msg msg-user">${input.value}</div>`;
             input.value = '';
 
-            // Bot Response Logic (Simple Keyword Matching)
             let response = "";
             if (text.includes('price') || text.includes('cost') || text.includes('գին') || text.includes('цена')) {
                 response = lang === 'hy' ? "Գինը կախված է կշռից և ծավալից: Խնդրում ենք լրացնել հայտը:" : (lang === 'ru' ? "Цена зависит от веса и объема. Пожалуйста, заполните форму." : "Price depends on weight and volume. Please fill out the quote form.");
             } else if (text.includes('dangerous') || text.includes('վտանգավոր') || text.includes('опасн')) {
-                response = lang === 'hy' ? "Այո, մենք ունենք վտանգավոր բեռների փոխադրման սերտիֆիկատ:" : (lang === 'ru' ? "Да, у нас есть сертификат на перевозку опасных грузов." : "Yes, we are certified for Dangerous Goods transportation.");
-            } else if (text.includes('russia') || text.includes('ռուսաստան') || text.includes('россия')) {
-                response = lang === 'hy' ? "Այո, մենք իրականացնում ենք անխափան թռիչքներ Ռուսաստանից:" : (lang === 'ru' ? "Да, мы осуществляем бесперебойные рейсы из России." : "Yes, we operate uninterrupted flights from Russia.");
-            } else {
-                response = lang === 'hy' ? "Խնդրում եմ զանգահարել +374 41 54 00 45 հասցեով:" : (lang === 'ru' ? "Пожалуйста, позвоните нам по номеру +374 41 54 00 45." : "Please contact us at +374 41 54 00 45 for more details.");
-            }
-
-            setTimeout(() => {
-                body.innerHTML += `<div class="msg msg-bot">${response}</div>`;
-                body.scrollTop = body.scrollHeight;
-            }, 500);
-        }
-
-        // Initialize Documents on Load
-        window.addEventListener('DOMContentLoaded', renderDocuments);
-    </script>
-</body>
-</html>
+                response = lang === 'hy' ? "Այո, մենք ունենք վտանգավոր բեռների փոխադրման սերտիֆիկատ:" : (lang === 'ru' ? "Да,
