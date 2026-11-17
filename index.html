@@ -6,12 +6,12 @@
     
     <!-- SEO META TAGS -->
     <title>CARGO SERVICE LLC | Air Freight Armenia - Ural Airlines Representative</title>
-    <meta name="description" content="CARGO SERVICE LLC has been providing reliable international air freight services since 2004. Official representative of Ural Airlines in Armenia. Dangerous goods transportation, cargo from Russia to Armenia and USA.">
-    <meta name="keywords" content="Air Freight Armenia, Cargo Service LLC, Ural Airlines Armenia, Hayways, Dangerous Goods Transport, Air Cargo Yerevan, Logistics Armenia, Ferrari Transport Armenia">
+    <meta name="description" content="CARGO SERVICE LLC has been providing reliable international air freight services since 2004. Official representative of Ural Airlines in Armenia. Dangerous goods transportation, shipments to Russia and the Urals regions.">
+    <meta name="keywords" content="Air Freight Armenia, Cargo Service LLC, Ural Airlines Armenia, Dangerous Goods Transport, Air Cargo Yerevan, Logistics Armenia, Shipments to Russia">
     <meta name="author" content="CARGO SERVICE LLC">
     <meta property="og:title" content="CARGO SERVICE LLC | International Air Freight">
     <meta property="og:description" content="Reliable air freight solutions since 2004. Official Ural Airlines representative.">
-    <meta property="og:image" content="assets/hero.jpg">
+    <meta property="og:image" content="images/hero.jpg">
     
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
@@ -43,7 +43,7 @@
     </script>
 
     <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; color: #172D50; font-size: 16px; }
         h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
         
         /* Running Line */
@@ -64,9 +64,12 @@
         .msg { margin-bottom: 8px; padding: 8px; border-radius: 5px; max-width: 80%; }
         .msg-bot { background: #e2e8f0; align-self: flex-start; }
         .msg-user { background: #C62845; color: white; align-self: flex-end; margin-left: auto; }
+        
+        /* Table Hover */
+        tbody tr:hover { background-color: #f9fafb; }
     </style>
 </head>
-<body class="text-navy bg-white">
+<body class="bg-white">
 
     <!-- RUNNING LINE -->
     <div class="bg-ruby text-white py-1.5 marquee-container font-bold uppercase text-xs tracking-wider">
@@ -77,7 +80,8 @@
     <header class="sticky top-0 z-50 bg-white border-b border-border-grey shadow-sm">
         <div class="container mx-auto px-4 py-2.5 flex justify-between items-center">
             <a href="#home" class="flex items-center gap-3 hover:opacity-80 transition">
-                <img src="assets/logo.png" alt="Cargo Service Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="h-10 w-auto object-contain">
+                <!-- Logo expects images/logo.png -->
+                <img src="images/logo.png" alt="Cargo Service Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="h-10 w-auto object-contain">
                 <div class="h-10 w-32 img-placeholder rounded text-[10px] border-none bg-transparent hidden">LOGO MISSING</div>
             </a>
 
@@ -86,6 +90,8 @@
                 <a href="#about" class="hover:text-ruby transition-colors py-2" data-i18n="nav_about">ABOUT US</a>
                 <a href="#schedule" class="hover:text-ruby transition-colors py-2" data-i18n="nav_schedule">SCHEDULE</a>
                 <a href="#services" class="hover:text-ruby transition-colors py-2" data-i18n="nav_services">SERVICES</a>
+                <a href="#dangerous-goods" class="hover:text-ruby transition-colors py-2" data-i18n="nav_dg">DANGEROUS GOODS</a>
+                <a href="#documents" class="hover:text-ruby transition-colors py-2" data-i18n="nav_docs">DOCUMENTS</a>
                 <a href="#partners" class="hover:text-ruby transition-colors py-2" data-i18n="nav_partners">PARTNERS</a>
                 <a href="#faq" class="hover:text-ruby transition-colors py-2" data-i18n="nav_faq">FAQ</a>
                 <a href="#contact" class="hover:text-ruby transition-colors py-2" data-i18n="nav_contact">CONTACT</a>
@@ -105,15 +111,25 @@
         <div id="mobile-menu" class="hidden lg:hidden bg-white border-t p-4">
             <a href="#home" class="block py-2 text-sm">Home</a>
             <a href="#about" class="block py-2 text-sm">About Us</a>
+            <a href="#schedule" class="block py-2 text-sm">Schedule</a>
+            <a href="#services" class="block py-2 text-sm">Services</a>
+            <a href="#dangerous-goods" class="block py-2 text-sm">Dangerous Goods</a>
+            <a href="#documents" class="block py-2 text-sm">Documents</a>
             <a href="#contact" class="block py-2 text-ruby font-bold text-sm">Contact</a>
         </div>
     </header>
 
     <!-- HERO SECTION -->
     <section id="home" class="relative h-[550px] flex items-center bg-navy overflow-hidden">
-        <img src="assets/hero.jpg" alt="Cargo Plane" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="absolute inset-0 w-full h-full object-cover opacity-40">
-        <div class="absolute inset-0 img-placeholder opacity-20 border-none bg-navy hidden">UPLOAD assets/hero.jpg</div>
+        <img src="images/hero.jpg" alt="Cargo Plane" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="absolute inset-0 w-full h-full object-cover opacity-40" loading="lazy">
+        <div class="absolute inset-0 img-placeholder opacity-20 border-none bg-navy hidden">UPLOAD images/hero.jpg</div>
         <div class="container mx-auto px-4 relative z-10 text-center text-white">
+            <!-- Trust Badge -->
+            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-1.5 rounded-full mb-6">
+                <i class="fa-solid fa-check-circle text-green-400"></i>
+                <span class="text-xs font-bold uppercase tracking-wider" data-i18n="badge_ural">Official Ural Airlines Representative</span>
+            </div>
+            
             <h1 class="text-4xl lg:text-5xl font-bold mb-4" data-i18n="hero_title">YOUR CARGO. OUR PRIORITY.</h1>
             <p class="text-lg text-gray-200 mb-6 max-w-2xl mx-auto" data-i18n="hero_desc">Reliable international air freight solutions backed by over 20 years of logistics experience.</p>
             <a href="#contact" class="bg-ruby hover:bg-ruby-dark text-white px-8 py-3 rounded font-bold uppercase transition-all-300 text-sm" data-i18n="btn_book">Book Your Shipment</a>
@@ -133,21 +149,76 @@
                 
                 <p data-i18n="about_p4">Furthermore, we specialize in the transportation of Dangerous Goods, managed by our certified professionals who ensure full compliance with international safety regulations.</p>
             </div>
+
+            <!-- Stats Strip -->
+            <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center border-t border-border-grey pt-8">
+                <div>
+                    <div class="text-3xl font-bold text-ruby">[YEARS]</div>
+                    <div class="text-xs uppercase tracking-wide text-text-secondary mt-1" data-i18n="stat_years">Years in Business</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-ruby">[NUMBER]+</div>
+                    <div class="text-xs uppercase tracking-wide text-text-secondary mt-1" data-i18n="stat_shipments">Shipments</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-ruby">[NUMBER]</div>
+                    <div class="text-xs uppercase tracking-wide text-text-secondary mt-1" data-i18n="stat_destinations">Destinations</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-ruby">[NUMBER]</div>
+                    <div class="text-xs uppercase tracking-wide text-text-secondary mt-1" data-i18n="stat_tons">Tons Delivered</div>
+                </div>
+            </div>
+            <div class="text-center mt-4 text-sm font-bold text-navy" data-i18n="since_year">Since [YEAR]</div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="py-16 bg-cool-grey">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-navy mb-10 text-center" data-i18n="hiw_title">HOW IT WORKS</h2>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm mb-3 text-ruby"><i class="fa-solid fa-file-invoice"></i></div>
+                    <h4 class="font-bold text-sm" data-i18n="hiw_1">Request</h4>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm mb-3 text-ruby"><i class="fa-solid fa-calculator"></i></div>
+                    <h4 class="font-bold text-sm" data-i18n="hiw_2">Quote</h4>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm mb-3 text-ruby"><i class="fa-solid fa-box-open"></i></div>
+                    <h4 class="font-bold text-sm" data-i18n="hiw_3">Cargo Handover</h4>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm mb-3 text-ruby"><i class="fa-solid fa-plane-departure"></i></div>
+                    <h4 class="font-bold text-sm" data-i18n="hiw_4">Flight</h4>
+                </div>
+                <div class="flex flex-col items-center col-span-2 md:col-span-1">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm mb-3 text-ruby"><i class="fa-solid fa-truck-fast"></i></div>
+                    <h4 class="font-bold text-sm" data-i18n="hiw_5">Delivery</h4>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- FLIGHT SCHEDULE -->
-    <section id="schedule" class="py-12 bg-cool-grey">
+    <section id="schedule" class="py-12 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold text-navy mb-6 text-center" data-i18n="schedule_title">FLIGHT SCHEDULE</h2>
-            <div class="overflow-x-auto bg-white rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold text-navy mb-2 text-center" data-i18n="schedule_title">FLIGHT SCHEDULE</h2>
+            <p class="text-center text-xs text-text-secondary mb-6" data-i18n="last_updated">Last updated: [DATE]</p>
+            
+            <div class="overflow-x-auto bg-white rounded-lg shadow-lg border border-border-grey">
                 <table class="w-full text-left border-collapse">
                     <thead>
                         <tr class="bg-navy text-white uppercase text-xs">
-                            <th class="p-3">Airline</th>
-                            <th class="p-3">Route</th>
-                            <th class="p-3">Frequency</th>
-                            <th class="p-3">Status</th>
+                            <th class="p-3" data-i18n="th_airline">Airline</th>
+                            <th class="p-3" data-i18n="th_route">Route</th>
+                            <th class="p-3" data-i18n="th_days">Days</th>
+                            <th class="p-3" data-i18n="th_dep">Departure</th>
+                            <th class="p-3" data-i18n="th_cutoff">Cargo Cut-off</th>
+                            <th class="p-3" data-i18n="th_transit">Transit Time</th>
+                            <th class="p-3" data-i18n="th_status">Status</th>
                         </tr>
                     </thead>
                     <tbody class="text-xs text-navy">
@@ -155,17 +226,41 @@
                             <td class="p-3 font-bold">URAL AIRLINES</td>
                             <td class="p-3">Moscow (VKO) – Yerevan (EVN)</td>
                             <td class="p-3">Daily</td>
+                            <td class="p-3">10:00 AM</td>
+                            <td class="p-3">08:00 AM</td>
+                            <td class="p-3">~3h 30m</td>
                             <td class="p-3"><span class="text-green-600 font-bold">Active</span></td>
                         </tr>
                         <tr class="border-b border-border-grey">
                             <td class="p-3 font-bold">URAL AIRLINES</td>
                             <td class="p-3">Yekaterinburg (SVX) – Yerevan (EVN)</td>
                             <td class="p-3">3x Weekly</td>
+                            <td class="p-3">02:00 PM</td>
+                            <td class="p-3">12:00 PM</td>
+                            <td class="p-3">~3h 15m</td>
                             <td class="p-3"><span class="text-green-600 font-bold">Active</span></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+            
+            <div class="mt-6 text-center">
+                <h3 class="font-bold text-sm text-navy mb-2" data-i18n="destinations_title">Main Destinations:</h3>
+                <p class="text-xs text-text-secondary">[CITIES]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING INFO -->
+    <section class="py-12 bg-cool-grey">
+        <div class="container mx-auto px-4 max-w-3xl text-center">
+            <h2 class="text-2xl font-bold text-navy mb-4" data-i18n="pricing_title">How Price is Calculated</h2>
+            <p class="text-sm text-text-secondary mb-4" data-i18n="pricing_desc">Chargeable weight is the greater of actual weight and volumetric weight.</p>
+            <div class="bg-white p-4 rounded shadow-sm inline-block mb-4">
+                <code class="text-ruby font-bold">Volumetric Weight = (L x W x H in cm) / 6000</code>
+            </div>
+            <p class="text-xs text-text-secondary mb-6" data-i18n="min_charge">Minimum charge: [AMOUNT]</p>
+            <a href="#contact" class="bg-navy hover:bg-midnight text-white px-6 py-2 rounded text-sm font-bold uppercase transition" data-i18n="btn_get_quote">Get a Quote</a>
         </div>
     </section>
 
@@ -180,15 +275,63 @@
                     <p class="text-xs text-text-secondary">Global connectivity through Ural Airlines and Hayways LLC.</p>
                 </div>
                 <div class="p-5 border rounded hover:shadow-lg transition">
-                    <i class="fa-solid fa-triangle-exclamation text-2xl text-ruby mb-3"></i>
-                    <h3 class="font-bold text-base mb-2">Dangerous Goods</h3>
-                    <p class="text-xs text-text-secondary">Certified handling and documentation for regulated cargo.</p>
-                </div>
-                <div class="p-5 border rounded hover:shadow-lg transition">
                     <i class="fa-solid fa-car text-2xl text-ruby mb-3"></i>
                     <h3 class="font-bold text-base mb-2">Special Cargo</h3>
                     <p class="text-xs text-text-secondary">High-value transportation including automotive logistics.</p>
                 </div>
+                <div class="p-5 border rounded hover:shadow-lg transition">
+                    <i class="fa-solid fa-boxes-packing text-2xl text-ruby mb-3"></i>
+                    <h3 class="font-bold text-base mb-2">Customs Clearance</h3>
+                    <p class="text-xs text-text-secondary">Full support with documentation and customs procedures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DANGEROUS GOODS SECTION -->
+    <section id="dangerous-goods" class="py-16 bg-cool-grey">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-2xl font-bold text-navy mb-6 text-center" data-i18n="dg_title">DANGEROUS GOODS TRANSPORTATION</h2>
+            <div class="bg-white p-6 rounded shadow-lg">
+                <p class="text-sm text-text-secondary mb-4" data-i18n="dg_intro">We handle dangerous goods in strict compliance with IATA and airline regulations. Our team is certified to ensure safe handling.</p>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <h4 class="font-bold text-navy text-sm mb-2" data-i18n="dg_classes">Accepted Classes:</h4>
+                        <ul class="text-xs text-text-secondary list-disc pl-4">
+                            <li>[CLASSES]</li>
+                            <li data-i18n="dg_class_note">Please confirm specific class with us before booking.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-navy text-sm mb-2" data-i18n="dg_docs">Required Documents:</h4>
+                        <ul class="text-xs text-text-secondary list-disc pl-4">
+                            <li>Shipper’s Declaration for Dangerous Goods</li>
+                            <li>Safety Data Sheet (SDS)</li>
+                            <li>Air Waybill</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-red-50 border border-red-100 p-4 rounded mb-6">
+                    <h4 class="font-bold text-ruby text-sm mb-1"><i class="fa-solid fa-triangle-exclamation mr-2"></i><span data-i18n="dg_packaging">Packaging & Labelling</span></h4>
+                    <p class="text-xs text-text-secondary" data-i18n="dg_packaging_desc">All packages must be properly labelled and packed according to UN specifications. Improperly packed cargo will be rejected.</p>
+                </div>
+
+                <div class="text-center">
+                    <p class="text-xs font-bold text-navy mb-3" data-i18n="dg_contact_note">Contact us before shipping any dangerous goods.</p>
+                    <a href="#contact" class="bg-ruby hover:bg-ruby-dark text-white px-6 py-2 rounded text-sm font-bold uppercase transition" data-i18n="btn_dg_quote">Request a DG Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOCUMENTS & CERTIFICATES -->
+    <section id="documents" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-navy mb-10 text-center" data-i18n="docs_title">Documents & Certificates</h2>
+            <div id="documents-grid" class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Documents will be injected here by JS -->
             </div>
         </div>
     </section>
@@ -196,23 +339,23 @@
     <!-- PARTNERS -->
     <section id="partners" class="py-16 bg-cool-grey">
         <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold text-navy mb-10 text-center">AIRLINE PARTNERS</h2>
+            <h2 class="text-2xl font-bold text-navy mb-10 text-center" data-i18n="partners_title">AIRLINE PARTNERS</h2>
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="bg-white p-6 rounded shadow-sm text-center flex flex-col items-center">
+                <div class="bg-white p-6 rounded shadow-sm text-center flex flex-col items-center h-full">
                     <div class="h-24 w-full mb-4 flex items-center justify-center">
-                        <img src="assets/ural.jpg" alt="Ural Airlines" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="h-full object-contain">
+                        <img src="images/ural-airlines.png" alt="Ural Airlines" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="h-full object-contain" loading="lazy">
                         <div class="h-20 w-32 img-placeholder hidden">URAL LOGO</div>
                     </div>
                     <h3 class="font-bold text-lg text-navy">URAL AIRLINES</h3>
-                    <p class="text-xs text-ruby font-bold uppercase mt-1">Official Representative</p>
+                    <p class="text-xs text-text-secondary mt-2" data-i18n="partner_ural_desc">Official Representative in Armenia</p>
                 </div>
-                <div class="bg-white p-6 rounded shadow-sm text-center flex flex-col items-center">
+                <div class="bg-white p-6 rounded shadow-sm text-center flex flex-col items-center h-full">
                     <div class="h-24 w-full mb-4 flex items-center justify-center">
-                        <img src="assets/hayways.jpg" alt="Hayways" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="h-full object-contain">
+                        <img src="images/hayways.png" alt="Hayways" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="h-full object-contain" loading="lazy">
                         <div class="h-20 w-32 img-placeholder hidden">HAYWAYS LOGO</div>
                     </div>
                     <h3 class="font-bold text-lg text-navy">HAYWAYS LLC</h3>
-                    <p class="text-xs text-ruby font-bold uppercase mt-1">Strategic Cooperation</p>
+                    <p class="text-xs text-text-secondary mt-2" data-i18n="partner_hayways_desc">Strategic Cooperation Partner</p>
                 </div>
             </div>
         </div>
@@ -237,6 +380,36 @@
                 <div class="border border-border-grey rounded p-4">
                     <h3 class="font-bold text-navy mb-2" data-i18n="faq_q3">How is the shipping cost calculated?</h3>
                     <p class="text-sm text-text-secondary" data-i18n="faq_a3">Cost depends on weight and volume. The volumetric weight is calculated as (Length x Width x Height) / 6000. You pay for the higher of the two weights.</p>
+                </div>
+                <!-- Q4 -->
+                <div class="border border-border-grey rounded p-4">
+                    <h3 class="font-bold text-navy mb-2" data-i18n="faq_q4">What documents are needed to ship cargo?</h3>
+                    <p class="text-sm text-text-secondary" data-i18n="faq_a4">Commercial invoice, packing list and air waybill data. Dangerous goods also need a Shipper’s Declaration and SDS. [CONFIRM LIST]</p>
+                </div>
+                <!-- Q5 -->
+                <div class="border border-border-grey rounded p-4">
+                    <h3 class="font-bold text-navy mb-2" data-i18n="faq_q5">How long does delivery take?</h3>
+                    <p class="text-sm text-text-secondary" data-i18n="faq_a5">Usually [X-Y] days depending on the route; see the schedule above.</p>
+                </div>
+                <!-- Q6 -->
+                <div class="border border-border-grey rounded p-4">
+                    <h3 class="font-bold text-navy mb-2" data-i18n="faq_q6">Which dangerous goods do you accept?</h3>
+                    <p class="text-sm text-text-secondary" data-i18n="faq_a6">We handle [CLASSES] in line with airline and IATA rules. Contact us before shipping.</p>
+                </div>
+                <!-- Q7 -->
+                <div class="border border-border-grey rounded p-4">
+                    <h3 class="font-bold text-navy mb-2" data-i18n="faq_q7">Can I track my shipment?</h3>
+                    <p class="text-sm text-text-secondary" data-i18n="faq_a7">Yes, send us your air waybill number and we will give you the status.</p>
+                </div>
+                <!-- Q8 -->
+                <div class="border border-border-grey rounded p-4">
+                    <h3 class="font-bold text-navy mb-2" data-i18n="faq_q8">Which cities do you deliver to?</h3>
+                    <p class="text-sm text-text-secondary" data-i18n="faq_a8">Russia and the Urals regions: [CITIES].</p>
+                </div>
+                <!-- Q9 -->
+                <div class="border border-border-grey rounded p-4">
+                    <h3 class="font-bold text-navy mb-2" data-i18n="faq_q9">How do I get a quote?</h3>
+                    <p class="text-sm text-text-secondary" data-i18n="faq_a9">Fill in the form below or message us on WhatsApp or Telegram.</p>
                 </div>
             </div>
         </div>
@@ -264,14 +437,37 @@
                             <i class="fa-solid fa-envelope text-ruby"></i>
                             <a href="mailto:evn.cargo.service@gmail.com" class="hover:text-ruby transition">evn.cargo.service@gmail.com</a>
                         </div>
+                        
+                        <!-- Social Buttons -->
+                        <div class="flex gap-4 mt-4">
+                            <a href="[WHATSAPP_LINK]" target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded text-xs font-bold uppercase flex items-center gap-2">
+                                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                            </a>
+                            <a href="[TELEGRAM_LINK]" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-xs font-bold uppercase flex items-center gap-2">
+                                <i class="fa-brands fa-telegram"></i> Telegram
+                            </a>
+                        </div>
                     </div>
                     
                     <!-- GOOGLE MAP -->
                     <div class="mt-6 h-64 bg-gray-200 rounded overflow-hidden border border-gray-600">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2986.5!2d44.3975!3d40.1475!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abef582800979%3A0x67890abcdef!2sZvartnots+International+Airport!5m2!1sen!2sam" 
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                            src="https://www.google.com/maps?q=Zvartnots+Cargo+Complex,+Armenia&output=embed" 
+                            width="100%" height="320" style="border:0;border-radius:8px" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Cargo Service LLC location">
                         </iframe>
+                    </div>
+                    <div class="mt-2 text-center">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Zvartnots+Cargo+Complex+Armenia" target="_blank" class="text-xs text-ruby hover:text-white underline" data-i18n="btn_open_maps">Open in Google Maps</a>
+                    </div>
+
+                    <!-- Info Block -->
+                    <div class="mt-6 bg-white/5 p-4 rounded border border-white/10 text-xs space-y-2">
+                        <p><strong class="text-ruby" data-i18n="info_find">How to find us:</strong> [DIRECTIONS, e.g. building / gate / floor]</p>
+                        <p><strong class="text-ruby" data-i18n="info_cargo_hours">Cargo acceptance hours:</strong> [HOURS]</p>
+                        <p><strong class="text-ruby" data-i18n="info_office_hours">Office hours:</strong> [HOURS]</p>
+                        <p><strong class="text-ruby" data-i18n="info_contact">Contact person:</strong> [NAME], [PHONE]</p>
+                        <p><strong class="text-ruby" data-i18n="info_bring">What to bring:</strong> air waybill / shipping documents, ID, [OTHER]</p>
+                        <p class="text-ruby font-bold mt-2" data-i18n="info_dg">Dangerous goods: please contact us before bringing the cargo.</p>
                     </div>
                 </div>
 
@@ -280,15 +476,38 @@
                     <h3 class="text-xl font-bold mb-4" data-i18n="form_title">REQUEST A QUOTE</h3>
                     <form id="quote-form" class="space-y-3">
                         <input type="text" data-i18n-ph="ph_name" placeholder="Full Name" required class="w-full bg-cool-grey border p-2 rounded text-sm">
-                        <input type="email" data-i18n-ph="ph_email" placeholder="Email Address" required class="w-full bg-cool-grey border p-2 rounded text-sm">
+                        <input type="text" data-i18n-ph="ph_contact" placeholder="Email or Phone" required class="w-full bg-cool-grey border p-2 rounded text-sm">
+                        
+                        <div class="grid grid-cols-2 gap-2">
+                            <input type="text" data-i18n-ph="ph_origin" placeholder="Origin" class="w-full bg-cool-grey border p-2 rounded text-sm">
+                            <input type="text" data-i18n-ph="ph_destination" placeholder="Destination" class="w-full bg-cool-grey border p-2 rounded text-sm">
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-2">
+                            <input type="number" id="calc-weight" placeholder="Weight (kg)" class="w-full bg-cool-grey border p-2 rounded text-sm">
+                            <select class="w-full bg-cool-grey border p-2 rounded text-sm">
+                                <option value="" disabled selected>Cargo Type</option>
+                                <option value="general">General Cargo</option>
+                                <option value="dangerous">Dangerous Goods</option>
+                                <option value="valuable">Valuable Cargo</option>
+                            </select>
+                        </div>
+
                         <div class="grid grid-cols-3 gap-2">
                             <input type="number" id="calc-l" placeholder="L (cm)" class="w-full bg-cool-grey border p-2 rounded text-sm">
                             <input type="number" id="calc-w" placeholder="W (cm)" class="w-full bg-cool-grey border p-2 rounded text-sm">
                             <input type="number" id="calc-h" placeholder="H (cm)" class="w-full bg-cool-grey border p-2 rounded text-sm">
                         </div>
+                        
                         <div class="bg-ruby/10 p-2 rounded text-center text-xs">
                             <span data-i18n="lbl_vol">Vol. Weight:</span> <span id="vol-result" class="font-bold text-ruby">0</span> kg
                         </div>
+
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" id="is-dg" class="accent-ruby">
+                            <label for="is-dg" class="text-xs font-bold text-navy" data-i18n="lbl_is_dg">Dangerous Goods?</label>
+                        </div>
+
                         <textarea data-i18n-ph="ph_msg" placeholder="Message details..." class="w-full bg-cool-grey border p-2 rounded h-20 text-sm"></textarea>
                         <button type="submit" class="w-full bg-ruby text-white py-2 rounded font-bold uppercase hover:bg-ruby-dark text-sm" data-i18n="btn_send">Send Inquiry</button>
                     </form>
@@ -298,8 +517,15 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-midnight text-white py-6 text-center border-t border-gray-700 text-xs">
-        <p>&copy; 2026 CARGO SERVICE LLC. Official Representative of URAL AIRLINES.</p>
+    <footer class="bg-midnight text-white py-8 text-center border-t border-gray-700 text-xs">
+        <div class="container mx-auto px-4">
+            <p class="mb-2">&copy; 2026 CARGO SERVICE LLC. Official Representative of URAL AIRLINES.</p>
+            <p class="text-gray-400 mb-4">Legal Name: [LEGAL NAME] | Reg. No: [NUMBER] | Legal Address: [ADDRESS]</p>
+            <div class="flex justify-center gap-4">
+                <a href="#" class="hover:text-ruby transition" data-i18n="link_privacy">Privacy Policy</a>
+                <a href="#" class="hover:text-ruby transition" data-i18n="link_terms">Terms of Service</a>
+            </div>
+        </div>
     </footer>
 
     <!-- AI CHATBOT WIDGET -->
@@ -324,55 +550,121 @@
 
     <!-- JAVASCRIPT -->
     <script>
+        // DOCUMENTS LIST CONFIGURATION
+        // Add new documents here. File name must match the file in docs/ folder.
+        const documentsList = [
+            {
+                file: 'docs/ural-airlines-authorization.pdf',
+                title: { en: 'Ural Airlines Authorization', ru: 'Авторизация Ural Airlines', hy: 'Ural Airlines-ի լիազորություն' }
+            },
+            {
+                file: 'docs/dgr-training-certificate.pdf',
+                title: { en: 'DGR Training Certificate', ru: 'Сертификат DGR', hy: 'DGR վկայական' }
+            },
+            {
+                file: 'docs/company-registration.pdf',
+                title: { en: 'Company Registration', ru: 'Регистрация компании', hy: 'Ընկերության գրանցում' }
+            },
+            {
+                file: 'docs/insurance.pdf',
+                title: { en: 'Insurance Policy', ru: 'Страховой полис', hy: 'Ապահովագրական պոլիս' }
+            }
+        ];
+
         // TRANSLATIONS DATA
         const translations = {
             en: {
-                nav_home: "HOME", nav_about: "ABOUT US", nav_schedule: "SCHEDULE", nav_services: "SERVICES", nav_partners: "PARTNERS", nav_faq: "FAQ", nav_contact: "CONTACT",
+                nav_home: "HOME", nav_about: "ABOUT US", nav_schedule: "SCHEDULE", nav_services: "SERVICES", nav_dg: "DANGEROUS GOODS", nav_docs: "DOCUMENTS", nav_partners: "PARTNERS", nav_faq: "FAQ", nav_contact: "CONTACT",
                 btn_quote: "Request a Quote",
+                badge_ural: "Official Ural Airlines Representative",
                 hero_title: "YOUR CARGO. OUR PRIORITY.",
                 hero_desc: "Reliable international air freight solutions backed by over 20 years of logistics experience.",
                 btn_book: "Book Your Shipment",
                 about_title: "ABOUT CARGO SERVICE LLC",
-                about_p1: "Since 2004, CARGO SERVICE LLC has been a pillar of reliability in the international air freight market. We have built a reputation for trust and professionalism.",
-                about_p2: "During the COVID-19 pandemic, we successfully organized the transportation of 3,000 kg of catalytic converters from Armenia to the USA, proving our resilience.",
-                about_p3: "As the Official Representative of Ural Airlines, we ensure uninterrupted cargo flights between Russia and Armenia despite restrictions.",
-                about_p4: "We also specialize in Dangerous Goods transportation, managed by our certified professionals.",
-                schedule_title: "FLIGHT SCHEDULE",
+                about_p1: "Since 2004, CARGO SERVICE LLC has been a pillar of reliability in the international air freight market. We have built a reputation for trust and professionalism that stands firm even in the most challenging times.",
+                about_p2: "During the global disruptions of the COVID-19 pandemic, while many stopped, we continued to operate. We successfully organized the complex transportation of approximately 3,000 kg of catalytic converters from Armenia to the United States, proving our resilience and logistical capability.",
+                about_p3: "Today, as the <strong>Official Representative of Ural Airlines</strong> in Armenia, we ensure uninterrupted cargo transportation between Russia and Armenia, despite international restrictions. We are dedicated to the safe and secure transport of your goods.",
+                about_p4: "Furthermore, we specialize in the transportation of Dangerous Goods, managed by our certified professionals who ensure full compliance with international safety regulations.",
+                stat_years: "Years in Business", stat_shipments: "Shipments", stat_destinations: "Destinations", stat_tons: "Tons Delivered",
+                since_year: "Since [YEAR]",
+                hiw_title: "HOW IT WORKS", hiw_1: "Request", hiw_2: "Quote", hiw_3: "Cargo Handover", hiw_4: "Flight", hiw_5: "Delivery",
+                schedule_title: "FLIGHT SCHEDULE", last_updated: "Last updated: [DATE]",
+                th_airline: "Airline", th_route: "Route", th_days: "Days", th_dep: "Departure", th_cutoff: "Cargo Cut-off", th_transit: "Transit Time", th_status: "Status",
+                destinations_title: "Main Destinations:",
+                pricing_title: "How Price is Calculated", pricing_desc: "Chargeable weight is the greater of actual weight and volumetric weight.", min_charge: "Minimum charge: [AMOUNT]", btn_get_quote: "Get a Quote",
                 services_title: "OUR SERVICES",
+                dg_title: "DANGEROUS GOODS TRANSPORTATION", dg_intro: "We handle dangerous goods in strict compliance with IATA and airline regulations. Our team is certified to ensure safe handling.",
+                dg_classes: "Accepted Classes:", dg_class_note: "Please confirm specific class with us before booking.",
+                dg_docs: "Required Documents:", dg_packaging: "Packaging & Labelling", dg_packaging_desc: "All packages must be properly labelled and packed according to UN specifications. Improperly packed cargo will be rejected.",
+                dg_contact_note: "Contact us before shipping any dangerous goods.", btn_dg_quote: "Request a DG Quote",
+                docs_title: "Documents & Certificates", btn_download: "Download PDF",
+                partners_title: "AIRLINE PARTNERS", partner_ural_desc: "Official Representative in Armenia", partner_hayways_desc: "Strategic Cooperation Partner",
                 faq_title: "FREQUENTLY ASKED QUESTIONS",
-                faq_q1: "Do you transport Dangerous Goods?", faq_a1: "Yes, we hold the necessary certifications and have professional specialists.",
-                faq_q2: "Can you ship from Russia now?", faq_a2: "Yes, as Ural Airlines representatives, we ensure uninterrupted flights.",
-                faq_q3: "How is cost calculated?", faq_a3: "Cost depends on weight and volume (LxWxH/6000).",
-                contact_title: "CONTACT US", lbl_address: "Address:", form_title: "REQUEST A QUOTE", lbl_vol: "Vol. Weight:", btn_send: "Send Inquiry",
-                ph_name: "Full Name", ph_email: "Email Address", ph_msg: "Message details...",
+                faq_q1: "Do you transport Dangerous Goods?", faq_a1: "Yes, we hold the necessary certifications and have professional specialists to handle Dangerous Goods transportation safely and legally.",
+                faq_q2: "Can you ship cargo from Russia to Armenia now?", faq_a2: "Absolutely. As the official representative of Ural Airlines, we ensure uninterrupted cargo flights between Moscow/Yekaterinburg and Yerevan despite restrictions.",
+                faq_q3: "How is the shipping cost calculated?", faq_a3: "Cost depends on weight and volume. The volumetric weight is calculated as (Length x Width x Height) / 6000. You pay for the higher of the two weights.",
+                faq_q4: "What documents are needed to ship cargo?", faq_a4: "Commercial invoice, packing list and air waybill data. Dangerous goods also need a Shipper’s Declaration and SDS. [CONFIRM LIST]",
+                faq_q5: "How long does delivery take?", faq_a5: "Usually [X-Y] days depending on the route; see the schedule above.",
+                faq_q6: "Which dangerous goods do you accept?", faq_a6: "We handle [CLASSES] in line with airline and IATA rules. Contact us before shipping.",
+                faq_q7: "Can I track my shipment?", faq_a7: "Yes, send us your air waybill number and we will give you the status.",
+                faq_q8: "Which cities do you deliver to?", faq_a8: "Russia and the Urals regions: [CITIES].",
+                faq_q9: "How do I get a quote?", faq_a9: "Fill in the form below or message us on WhatsApp or Telegram.",
+                contact_title: "CONTACT US", lbl_address: "Address:", btn_open_maps: "Open in Google Maps",
+                info_find: "How to find us:", info_cargo_hours: "Cargo acceptance hours:", info_office_hours: "Office hours:", info_contact: "Contact person:", info_bring: "What to bring:", info_dg: "Dangerous goods: please contact us before bringing the cargo.",
+                form_title: "REQUEST A QUOTE", lbl_vol: "Vol. Weight:", lbl_is_dg: "Dangerous Goods?", btn_send: "Send Inquiry",
+                ph_name: "Full Name", ph_contact: "Email or Phone", ph_origin: "Origin", ph_destination: "Destination", ph_msg: "Message details...",
                 chat_welcome: "Hello! How can I help you with your cargo today?",
+                link_privacy: "Privacy Policy", link_terms: "Terms of Service",
                 marquee: "⚠️ HURRY UP TO BOOK YOUR SPOT - LIMITED AVAILABILITY"
             },
             ru: {
-                nav_home: "ГЛАВНАЯ", nav_about: "О НАС", nav_schedule: "РАСПИСАНИЕ", nav_services: "УСЛУГИ", nav_partners: "ПАРТНЕРЫ", nav_faq: "FAQ", nav_contact: "КОНТАКТЫ",
+                nav_home: "ГЛАВНАЯ", nav_about: "О НАС", nav_schedule: "РАСПИСАНИЕ", nav_services: "УСЛУГИ", nav_dg: "ОПАСНЫЕ ГРУЗЫ", nav_docs: "ДОКУМЕНТЫ", nav_partners: "ПАРТНЕРЫ", nav_faq: "FAQ", nav_contact: "КОНТАКТЫ",
                 btn_quote: "Запросить цену",
+                badge_ural: "Официальный представитель Ural Airlines",
                 hero_title: "ВАШ ГРУЗ. НАШ ПРИОРИТЕТ.",
                 hero_desc: "Надежные международные авиагрузовые решения с 20-летним опытом.",
                 btn_book: "Забронировать",
                 about_title: "О КОМПАНИИ CARGO SERVICE LLC",
-                about_p1: "С 2004 года CARGO SERVICE LLC является эталоном надежности на рынке международных авиаперевозок.",
-                about_p2: "Во время пандемии мы успешно организовали перевозку 3000 кг катализаторов из Армении в США.",
+                about_p1: "С 2004 года CARGO SERVICE LLC является эталоном надежности на рынке международных авиаперевозок. Мы построили репутацию доверия и профессионализма.",
+                about_p2: "Во время пандемии мы успешно организовали перевозку 3000 кг катализаторов из Армении в США, доказав нашу устойчивость.",
                 about_p3: "Как официальный представитель Ural Airlines, мы обеспечиваем бесперебойные рейсы между Россией и Арменией.",
                 about_p4: "Мы также специализируемся на перевозке опасных грузов сертифицированными специалистами.",
-                schedule_title: "РАСПИСАНИЕ РЕЙСОВ",
+                stat_years: "Лет в бизнесе", stat_shipments: "Отправок", stat_destinations: "Направлений", stat_tons: "Тонн доставлено",
+                since_year: "С [ГОД]",
+                hiw_title: "КАК ЭТО РАБОТАЕТ", hiw_1: "Запрос", hiw_2: "Расчет", hiw_3: "Прием груза", hiw_4: "Рейс", hiw_5: "Доставка",
+                schedule_title: "РАСПИСАНИЕ РЕЙСОВ", last_updated: "Обновлено: [ДАТА]",
+                th_airline: "Авиакомпания", th_route: "Маршрут", th_days: "Дни", th_dep: "Вылет", th_cutoff: "Прием груза", th_transit: "Время в пути", th_status: "Статус",
+                destinations_title: "Основные направления:",
+                pricing_title: "Как рассчитывается цена", pricing_desc: "Оплачиваемый вес — это больший из фактического и объемного веса.", min_charge: "Минимальная ставка: [СУММА]", btn_get_quote: "Получить расчет",
                 services_title: "НАШИ УСЛУГИ",
+                dg_title: "ПЕРЕВОЗКА ОПАСНЫХ ГРУЗОВ", dg_intro: "Мы работаем с опасными грузами в строгом соответствии с правилами IATA. Наша команда сертифицирована.",
+                dg_classes: "Принимаемые классы:", dg_class_note: "Пожалуйста, уточните класс перед бронированием.",
+                dg_docs: "Необходимые документы:", dg_packaging: "Упаковка и маркировка", dg_packaging_desc: "Все упаковки должны быть правильно маркированы и упакованы по стандартам ООН.",
+                dg_contact_note: "Свяжитесь с нами перед отправкой опасных грузов.", btn_dg_quote: "Запросить расчет DG",
+                docs_title: "Документы и сертификаты", btn_download: "Скачать PDF",
+                partners_title: "ПАРТНЕРЫ", partner_ural_desc: "Официальный представитель в Армении", partner_hayways_desc: "Стратегический партнер",
                 faq_title: "ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ",
                 faq_q1: "Перевозите ли вы опасные грузы?", faq_a1: "Да, у нас есть необходимые сертификаты и специалисты.",
                 faq_q2: "Можно ли отправить груз из России?", faq_a2: "Да, как представители Ural Airlines, мы обеспечиваем бесперебойные рейсы.",
                 faq_q3: "Как рассчитывается стоимость?", faq_a3: "Стоимость зависит от веса и объема (ДхШхВ/6000).",
-                contact_title: "СВЯЗАТЬСЯ С НАМИ", lbl_address: "Адрес:", form_title: "ЗАПРОСИТЬ ЦЕНУ", lbl_vol: "Объемный вес:", btn_send: "Отправить запрос",
-                ph_name: "ФИО", ph_email: "Электронная почта", ph_msg: "Детали сообщения...",
+                faq_q4: "Какие документы нужны для отправки?", faq_a4: "Коммерческий инвойс, упаковочный лист и данные авианакладной. Для опасных грузов также нужны Declaration и SDS. [УТОЧНИТЬ]",
+                faq_q5: "Сколько времени занимает доставка?", faq_a5: "Обычно [X-Y] дней в зависимости от маршрута. См. расписание выше.",
+                faq_q6: "Какие опасные грузы вы принимаете?", faq_a6: "Мы работаем с [КЛАССЫ] по правилам IATA. Свяжитесь с нами перед отправкой.",
+                faq_q7: "Могу ли я отслеживать груз?", faq_a7: "Да, отправьте нам номер авианакладной, и мы сообщим статус.",
+                faq_q8: "В какие города вы доставляете?", faq_a8: "Россия и регионы Урала: [ГОРОДА].",
+                faq_q9: "Как получить расчет?", faq_a9: "Заполните форму ниже или напишите нам в WhatsApp или Telegram.",
+                contact_title: "СВЯЗАТЬСЯ С НАМИ", lbl_address: "Адрес:", btn_open_maps: "Открыть в Google Maps",
+                info_find: "Как нас найти:", info_cargo_hours: "Часы приема груза:", info_office_hours: "Часы работы офиса:", info_contact: "Контактное лицо:", info_bring: "Что иметь при себе:", info_dg: "Опасные грузы: пожалуйста, свяжитесь с нами перед привозом груза.",
+                form_title: "ЗАПРОСИТЬ ЦЕНУ", lbl_vol: "Объемный вес:", lbl_is_dg: "Опасный груз?", btn_send: "Отправить запрос",
+                ph_name: "ФИО", ph_contact: "Email или Телефон", ph_origin: "Откуда", ph_destination: "Куда", ph_msg: "Детали сообщения...",
                 chat_welcome: "Здравствуйте! Чем я могу помочь вам с грузом?",
+                link_privacy: "Политика конфиденциальности", link_terms: "Условия использования",
                 marquee: "⚠️ УСПЕЙТЕ ЗАБРОНИРОВАТЬ МЕСТО - ОГРАНИЧЕННЫЕ ВОЗМОЖНОСТИ"
             },
             hy: {
-                nav_home: "ԳԼԽԱՎՈՐ", nav_about: "ՄԵՐ ՄԱՍԻՆ", nav_schedule: "ԹՌԻՉՔՆԵՐ", nav_services: "ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐ", nav_partners: "ԳՈՐԾԸՆԿԵՐՆԵՐ", nav_faq: "ՀՏՀ", nav_contact: "ԿԱՊ",
+                nav_home: "ԳԼԽԱՎՈՐ", nav_about: "ՄԵՐ ՄԱՍԻՆ", nav_schedule: "ԹՌԻՉՔՆԵՐ", nav_services: "ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐ", nav_dg: "ՎՏԱՆԳԱՎՈՐ ԲԵՌՆԵՐ", nav_docs: "ՓԱՍՏԱԹՂԹԵՐ", nav_partners: "ԳՈՐԾԸՆԿԵՐՆԵՐ", nav_faq: "ՀՏՀ", nav_contact: "ԿԱՊ",
                 btn_quote: "Պատվերել գինը",
+                badge_ural: "Ural Airlines-ի պաշտոնական ներկայացուցիչ",
                 hero_title: "ՁԵՐ ԲԵՌԸ։ ՄԵՐ ԱՌԱՋՆՈՐԴՈՒԹՅՈՒՆԸ։",
                 hero_desc: "Վստահելի միջազգային ավիաբեռնափոխադրումներ՝ 20 տարվա փորձով։",
                 btn_book: "Ամրագրել բեռը",
@@ -381,15 +673,36 @@
                 about_p2: "Նույնիսկ COVID-19-ի ժամանակ մենք իրականացրել ենք 3000 կգ կատալիզատորների արտահանում Հայաստանից ԱՄՆ։",
                 about_p3: "Որպես Ural Airlines-ի պաշտոնական ներկայացուցիչ՝ ապահովում ենք անխափան թռիչքներ Ռուսաստանի և Հայաստանի միջև։",
                 about_p4: "Մենք իրականացնում ենք նաև վտանգավոր բեռների փոխադրում սերտիֆիկացված մասնագետների կողմից։",
-                schedule_title: "ԹՌԻՉՔՆԵՐԻ ԺԱՄԱՆԱԿԱՑՈՒՅՑ",
+                stat_years: "Տարիներ բիզնեսում", stat_shipments: "Առաքումներ", stat_destinations: "Ուղղություններ", stat_tons: "Տոննա առաքված",
+                since_year: "[ԹՎԱԿԱՆԻՑ]",
+                hiw_title: "ԻՆՉՊԵՍ Է ԴԱ ԱՇԽԱՏՈՒՄ", hiw_1: "Հարցում", hiw_2: "Գնային առաջարկ", hiw_3: "Բեռի հանձնում", hiw_4: "Թռիչք", hiw_5: "Առաքում",
+                schedule_title: "ԹՌԻՉՔՆԵՐԻ ԺԱՄԱՆԱԿԱՑՈՒՅՑ", last_updated: "Վերջին թարմացումը՝ [ԱՄՍԱԹԻՎ]",
+                th_airline: "Ավիաընկերություն", th_route: "Մարշրուտ", th_days: "Օրեր", th_dep: "Մեկնում", th_cutoff: "Բեռի ընդունում", th_transit: "Տևողություն", th_status: "Կարգավիճակ",
+                destinations_title: "Հիմնական ուղղություններ՝",
+                pricing_title: "Ինչպես է հաշվարկվում գինը", pricing_desc: "Վճարովի քաշը իրական և ծավալային քաշերից մեծն է։", min_charge: "Նվազագույն սակագին՝ [ԳԻՆ]", btn_get_quote: "Ստանալ գնային առաջարկ",
                 services_title: "ՄԵՐ ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐԸ",
+                dg_title: "ՎՏԱՆԳԱՎՈՐ ԲԵՌՆԵՐԻ ՓՈԽԱԴՐՈՒՄ", dg_intro: "Մենք աշխատում ենք վտանգավոր բեռների հետ ըստ IATA կանոնների։ Մեր թիմը սերտիֆիկացված է։",
+                dg_classes: "Ընդունվող դասեր՝", dg_class_note: "Խնդրում ենք ճշտել դասը մինչև ամրագրումը։",
+                dg_docs: "Անհրաժեշտ փաստաթղթեր՝", dg_packaging: "Փաթեթավորում և պիտակավորում", dg_packaging_desc: "Բոլոր փաթեթները պետք է պիտակավորված լինեն ըստ UN ստանդարտների։",
+                dg_contact_note: "Ուղարկելուց առաջ կապվեք մեզ հետ։", btn_dg_quote: "Պատվերել DG գինը",
+                docs_title: "Փաստաթղթեր և վկայականներ", btn_download: "Ներբեռնել PDF",
+                partners_title: "ԳՈՐԾԸՆԿԵՐՆԵՐ", partner_ural_desc: "Պաշտոնական ներկայացուցիչ Հայաստանում", partner_hayways_desc: "Ռազմավարական գործընկեր",
                 faq_title: "ՀԱՃԱԽ ՏՐՎՈՂ ՀԱՐՑԵՐ",
                 faq_q1: "Արդյոք դուք փոխադրու՞մ եք վտանգավոր բեռներ։", faq_a1: "Այո, մենք ունենք համապատասխան սերտիֆիկատներ և մասնագետներ։",
                 faq_q2: "Հնարավո՞ր է արդյոք բեռ ուղարկել Ռուսաստանից։", faq_a2: "Այո, որպես Ural Airlines-ի ներկայացուցիչ՝ մենք ապահովում ենք անխափան թռիչքներ։",
                 faq_q3: "Ինչպե՞ս է հաշվարկվում արժեքը։", faq_a3: "Արժեքը կախված է կշռից և ծավալից (ԵրկxԼայxԲարձ/6000)։",
-                contact_title: "ԿԱՊ ՄԵԶ ՀԵՏ", lbl_address: "Հասցե:", form_title: "ՊԱՏՎԵՐԵԼ ԳԻՆԸ", lbl_vol: "Ծավալային քաշ:", btn_send: "Ուղարկել հարցումը",
-                ph_name: "Անուն Ազգանուն", ph_email: "Էլ. հասցե", ph_msg: "Հաղորդագրության մանրամասներ...",
+                faq_q4: "Ի՞նչ փաստաթղթեր են պետք բեռ ուղարկելու համար:", faq_a4: "Առևտրային ինվոյս, փաթեթավորման ցուցակ և օդային բեռնագրի տվյալներ. վտանգավոր բեռների համար՝ նաև Shipper’s Declaration և SDS: [ՃՇԳՐԵԼ]",
+                faq_q5: "Որքա՞ն ժամանակ է տևում առաքումը:", faq_a5: "Սովորաբար [X-Y] օր՝ կախված երթուղուց. տե՛ս վերևի չվերթների աղյուսակը:",
+                faq_q6: "Ո՞ր վտանգավոր բեռներն եք ընդունում:", faq_a6: "Մենք աշխատում ենք [ԴԱՍԵՐ] բեռների հետ՝ ըստ ավիաընկերության և IATA կանոնների: Ուղարկելուց առաջ կապվեք մեզ հետ:",
+                faq_q7: "Կարո՞ղ եմ հետևել իմ բեռին:", faq_a7: "Այո, ուղարկեք օդային բեռնագրի համարը, և մենք կտանք կարգավիճակը:",
+                faq_q8: "Ո՞ր քաղաքներ եք առաքում:", faq_a8: "Ռուսաստան և Ուրալի տարածաշրջաններ՝ [ՔԱՂԱՔՆԵՐ]:",
+                faq_q9: "Ինչպե՞ս ստանալ գնային առաջարկ:", faq_a9: "Լրացրեք ներքևի ձևը կամ գրեք մեզ WhatsApp-ով կամ Telegram-ով:",
+                contact_title: "ԿԱՊ ՄԵԶ ՀԵՏ", lbl_address: "Հասցե:", btn_open_maps: "Բացել Google Maps-ում",
+                info_find: "Ինչպես գտնել մեզ:", info_cargo_hours: "Բեռի ընդունման ժամեր:", info_office_hours: "Գրասենյակի ժամեր:", info_contact: "Կապի անձ:", info_bring: "Ի՞նչ բերել:", info_dg: "Վտանգավոր բեռներ՝ խնդրում ենք կապվել մեզ հետ բեռը բերելուց առաջ:",
+                form_title: "ՊԱՏՎԵՐԵԼ ԳԻՆԸ", lbl_vol: "Ծավալային քաշ:", lbl_is_dg: "Վտանգավոր բեռ?", btn_send: "Ուղարկել հարցումը",
+                ph_name: "Անուն Ազգանուն", ph_contact: "Email կամ Հեռախոս", ph_origin: "Որտեղից", ph_destination: "Ուր", ph_msg: "Հաղորդագրության մանրամասներ...",
                 chat_welcome: "Ողջույն: Ինչպե՞ս կարող եմ օգնել ձեզ բեռնափոխադրման հարցում։",
+                link_privacy: "Գաղտնիության քաղաքականություն", link_terms: "Սպասարկման պայմաններ",
                 marquee: "⚠️ ՇՏԱՊԻՐ ՈՐ ՀԱՍՑՆԵՍ ԱՄՐԱԳՐԵԼ ՔՈ ՏԵՂԸ - ՍԱՀՄԱՆԱՓԱԿ ՀՆԱՐԱՎՈՐՈՒԹՅՈՒՆՆԵՐ"
             }
         };
@@ -399,7 +712,7 @@
             const lang = e.target.value;
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                if (translations[lang][key]) el.textContent = translations[lang][key];
+                if (translations[lang][key]) el.innerHTML = translations[lang][key];
             });
             document.querySelectorAll('[data-i18n-ph]').forEach(el => {
                 const key = el.getAttribute('data-i18n-ph');
@@ -412,6 +725,31 @@
             const chatBody = document.getElementById('chat-body');
             chatBody.innerHTML = `<div class="msg msg-bot">${translations[lang].chat_welcome}</div>`;
         });
+
+        // DOCUMENTS RENDERER
+        async function renderDocuments() {
+            const grid = document.getElementById('documents-grid');
+            const lang = document.getElementById('lang-selector').value;
+            
+            for (const doc of documentsList) {
+                try {
+                    // Check if file exists
+                    const response = await fetch(doc.file, { method: 'HEAD' });
+                    if (response.ok) {
+                        const card = document.createElement('div');
+                        card.className = "bg-cool-grey p-4 rounded border border-border-grey flex flex-col items-center text-center";
+                        card.innerHTML = `
+                            <i class="fa-solid fa-file-pdf text-3xl text-ruby mb-3"></i>
+                            <h4 class="font-bold text-sm text-navy mb-2">${doc.title[lang]}</h4>
+                            <a href="${doc.file}" target="_blank" class="text-xs bg-white border border-ruby text-ruby px-3 py-1 rounded hover:bg-ruby hover:text-white transition" data-i18n="btn_download">${translations[lang].btn_download}</a>
+                        `;
+                        grid.appendChild(card);
+                    }
+                } catch (e) {
+                    console.log(`Document ${doc.file} not found or error checking.`);
+                }
+            }
+        }
 
         // CALCULATOR
         ['calc-l', 'calc-w', 'calc-h'].forEach(id => {
@@ -463,6 +801,9 @@
                 body.scrollTop = body.scrollHeight;
             }, 500);
         }
+
+        // Initialize Documents on Load
+        window.addEventListener('DOMContentLoaded', renderDocuments);
     </script>
 </body>
 </html>
