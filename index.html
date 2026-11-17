@@ -136,66 +136,78 @@
         </div>
     </section>
 
-    <!-- ABOUT US SECTION -->
-    <section id="about" class="py-24 bg-white">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <h2 class="text-3xl lg:text-4xl font-bold text-navy mb-12 text-center" data-i18n="about_title">ABOUT CARGO SERVICE LLC</h2>
-            <div class="prose prose-lg text-text-secondary mx-auto leading-relaxed">
-                <p data-i18n="about_p1" class="mb-6 text-lg">Since 2004, CARGO SERVICE LLC has been a pillar of reliability in the international air freight market. We have built a reputation for trust and professionalism that stands firm even in the most challenging times.</p>
+    <!-- ABOUT US SECTION (UPDATED) -->
+    <section id="about" class="py-24 bg-cool-grey">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <!-- Title with more spacing and visibility -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-navy inline-block relative pb-4" data-i18n="about_title">
+                    ABOUT CARGO SERVICE LLC
+                    <!-- Decorative line under title -->
+                    <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-ruby rounded"></span>
+                </h2>
+            </div>
+
+            <!-- Text Content -->
+            <div class="prose prose-lg text-text-secondary mx-auto leading-relaxed max-w-3xl bg-white p-8 lg:p-12 rounded-2xl shadow-sm border border-border-grey">
+                <p data-i18n="about_p1" class="mb-6 text-lg font-medium text-navy">Since 2004, CARGO SERVICE LLC has been a pillar of reliability in the international air freight market. We have built a reputation for trust and professionalism that stands firm even in the most challenging times.</p>
                 
-                <p data-i18n="about_p2" class="mb-6 text-lg">During the global disruptions of the COVID-19 pandemic, while many stopped, we continued to operate. We successfully organized the complex transportation of approximately 3,000 kg of catalytic converters from Armenia to the United States, proving our resilience and logistical capability.</p>
+                <p data-i18n="about_p2" class="mb-6">During the global disruptions of the COVID-19 pandemic, while many stopped, we continued to operate. We successfully organized the complex transportation of approximately 3,000 kg of catalytic converters from Armenia to the United States, proving our resilience and logistical capability.</p>
                 
-                <p data-i18n="about_p3" class="mb-6 text-lg">Today, as the <strong>Official Representative of Ural Airlines</strong> in Armenia, we ensure uninterrupted cargo transportation between Russia and Armenia, despite international restrictions. We are dedicated to the safe and secure transport of your goods.</p>
+                <p data-i18n="about_p3" class="mb-6">Today, as the <strong class="text-ruby">Official Representative of Ural Airlines</strong> in Armenia, we ensure uninterrupted cargo transportation between Russia and Armenia, despite international restrictions. We are dedicated to the safe and secure transport of your goods.</p>
                 
-                <p data-i18n="about_p4" class="text-lg">Furthermore, we specialize in the transportation of Dangerous Goods, managed by our certified professionals who ensure full compliance with international safety regulations.</p>
+                <p data-i18n="about_p4">Furthermore, we specialize in the transportation of Dangerous Goods, managed by our certified professionals who ensure full compliance with international safety regulations.</p>
             </div>
 
             <!-- Stats Strip -->
-            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center border-t border-border-grey pt-10">
-                <div>
-                    <div class="text-4xl font-bold text-ruby mb-2">[YEARS]</div>
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-ruby">
+                    <div class="text-4xl font-bold text-navy mb-2">[YEARS]</div>
                     <div class="text-xs uppercase tracking-widest text-text-secondary font-semibold" data-i18n="stat_years">Years in Business</div>
                 </div>
-                <div>
-                    <div class="text-4xl font-bold text-ruby mb-2">[NUMBER]+</div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-ruby">
+                    <div class="text-4xl font-bold text-navy mb-2">[NUMBER]+</div>
                     <div class="text-xs uppercase tracking-widest text-text-secondary font-semibold" data-i18n="stat_shipments">Shipments</div>
                 </div>
-                <div>
-                    <div class="text-4xl font-bold text-ruby mb-2">[NUMBER]</div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-ruby">
+                    <div class="text-4xl font-bold text-navy mb-2">[NUMBER]</div>
                     <div class="text-xs uppercase tracking-widest text-text-secondary font-semibold" data-i18n="stat_destinations">Destinations</div>
                 </div>
-                <div>
-                    <div class="text-4xl font-bold text-ruby mb-2">[NUMBER]</div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-ruby">
+                    <div class="text-4xl font-bold text-navy mb-2">[NUMBER]</div>
                     <div class="text-xs uppercase tracking-widest text-text-secondary font-semibold" data-i18n="stat_tons">Tons Delivered</div>
                 </div>
             </div>
-            <div class="text-center mt-6 text-sm font-bold text-navy uppercase tracking-wide" data-i18n="since_year">Since [YEAR]</div>
+            
+            <div class="text-center mt-8">
+                <span class="inline-block px-4 py-1 bg-navy text-white text-xs font-bold uppercase tracking-widest rounded-full" data-i18n="since_year">Since [YEAR]</span>
+            </div>
         </div>
     </section>
 
     <!-- HOW IT WORKS -->
-    <section id="how-it-works" class="py-24 bg-cool-grey">
+    <section id="how-it-works" class="py-24 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-navy mb-16 text-center" data-i18n="hiw_title">HOW IT WORKS</h2>
             <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
                 <div class="flex flex-col items-center group">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md mb-4 text-ruby group-hover:scale-110 transition-transform"><i class="fa-solid fa-file-invoice text-xl"></i></div>
+                    <div class="w-16 h-16 bg-cool-grey rounded-full flex items-center justify-center shadow-md mb-4 text-ruby group-hover:scale-110 transition-transform"><i class="fa-solid fa-file-invoice text-xl"></i></div>
                     <h4 class="font-bold text-sm uppercase tracking-wide" data-i18n="hiw_1">Request</h4>
                 </div>
                 <div class="flex flex-col items-center group">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md mb-4 text-ruby group-hover:scale-110 transition-transform"><i class="fa-solid fa-calculator text-xl"></i></div>
+                    <div class="w-16 h-16 bg-cool-grey rounded-full flex items-center justify-center shadow-md mb-4 text-ruby group-hover:scale-110 transition-transform"><i class="fa-solid fa-calculator text-xl"></i></div>
                     <h4 class="font-bold text-sm uppercase tracking-wide" data-i18n="hiw_2">Quote</h4>
                 </div>
                 <div class="flex flex-col items-center group">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md mb-4 text-ruby group-hover:scale-110 transition-transform"><i class="fa-solid fa-box-open text-xl"></i></div>
+                    <div class="w-16 h-16 bg-cool-grey rounded-full flex items-center justify-center shadow-md mb-4 text-ruby group-hover:scale-110 transition-transform"><i class="fa-solid fa-box-open text-xl"></i></div>
                     <h4 class="font-bold text-sm uppercase tracking-wide" data-i18n="hiw_3">Cargo Handover</h4>
                 </div>
                 <div class="flex flex-col items-center group">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md mb-4 text-ruby group-hover:scale-110 transition-transform"><i class="fa-solid fa-plane-departure text-xl"></i></div>
+                    <div class="w-16 h-16 bg-cool-grey rounded-full flex items-center justify-center shadow-md mb-4 text-ruby group-hover:scale-110 transition-transform"><i class="fa-solid fa-plane-departure text-xl"></i></div>
                     <h4 class="font-bold text-sm uppercase tracking-wide" data-i18n="hiw_4">Flight</h4>
                 </div>
                 <div class="flex flex-col items-center col-span-2 md:col-span-1 group">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md mb-4 text-ruby group-hover:scale-110 transition-transform"><i class="fa-solid fa-truck-fast text-xl"></i></div>
+                    <div class="w-16 h-16 bg-cool-grey rounded-full flex items-center justify-center shadow-md mb-4 text-ruby group-hover:scale-110 transition-transform"><i class="fa-solid fa-truck-fast text-xl"></i></div>
                     <h4 class="font-bold text-sm uppercase tracking-wide" data-i18n="hiw_5">Delivery</h4>
                 </div>
             </div>
@@ -203,7 +215,7 @@
     </section>
 
     <!-- FLIGHT SCHEDULE -->
-    <section id="schedule" class="py-24 bg-white">
+    <section id="schedule" class="py-24 bg-cool-grey">
         <div class="container mx-auto px-4 max-w-5xl">
             <h2 class="text-3xl font-bold text-navy mb-4 text-center" data-i18n="schedule_title">FLIGHT SCHEDULE</h2>
             <p class="text-center text-sm text-text-secondary mb-10" data-i18n="last_updated">Last updated: [DATE]</p>
@@ -227,7 +239,7 @@
                 </table>
             </div>
             
-            <div class="mt-10 text-center bg-cool-grey p-6 rounded-lg">
+            <div class="mt-10 text-center bg-white p-6 rounded-lg shadow-sm border border-border-grey">
                 <h3 class="font-bold text-base text-navy mb-2 uppercase tracking-wide" data-i18n="destinations_title">Main Destinations:</h3>
                 <p class="text-sm text-text-secondary mb-4">[CITIES]</p>
                 <a href="https://www.uralairlines.com/en/schedule" target="_blank" class="inline-flex items-center gap-2 text-xs text-ruby hover:text-navy font-bold uppercase tracking-wide transition">
@@ -238,11 +250,11 @@
     </section>
 
     <!-- PRICING INFO -->
-    <section class="py-20 bg-cool-grey">
+    <section class="py-20 bg-white">
         <div class="container mx-auto px-4 max-w-3xl text-center">
             <h2 class="text-2xl font-bold text-navy mb-6" data-i18n="pricing_title">How Price is Calculated</h2>
             <p class="text-base text-text-secondary mb-6 leading-relaxed" data-i18n="pricing_desc">Chargeable weight is the greater of actual weight and volumetric weight.</p>
-            <div class="bg-white p-6 rounded-xl shadow-sm inline-block mb-6 border border-border-grey">
+            <div class="bg-cool-grey p-6 rounded-xl shadow-sm inline-block mb-6 border border-border-grey">
                 <code class="text-ruby font-bold text-lg">Volumetric Weight = (L x W x H in cm) / 6000</code>
             </div>
             <p class="text-sm text-text-secondary mb-8" data-i18n="min_charge">Minimum charge: [AMOUNT]</p>
@@ -251,7 +263,7 @@
     </section>
 
     <!-- SERVICES -->
-    <section id="services" class="py-24 bg-white">
+    <section id="services" class="py-24 bg-cool-grey">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-navy mb-16 text-center" data-i18n="services_title">OUR SERVICES</h2>
             <div class="grid md:grid-cols-3 gap-8">
@@ -281,10 +293,10 @@
     </section>
 
     <!-- DANGEROUS GOODS SECTION -->
-    <section id="dangerous-goods" class="py-24 bg-cool-grey">
+    <section id="dangerous-goods" class="py-24 bg-white">
         <div class="container mx-auto px-4 max-w-4xl">
             <h2 class="text-3xl font-bold text-navy mb-8 text-center" data-i18n="dg_title">DANGEROUS GOODS TRANSPORTATION</h2>
-            <div class="bg-white p-8 lg:p-12 rounded-2xl shadow-lg">
+            <div class="bg-cool-grey p-8 lg:p-12 rounded-2xl shadow-lg border border-border-grey">
                 <p class="text-base text-text-secondary mb-8 leading-relaxed" data-i18n="dg_intro">We handle dangerous goods in strict compliance with IATA and airline regulations. Our team is certified to ensure safe handling.</p>
                 
                 <div class="grid md:grid-cols-2 gap-10 mb-8">
@@ -319,7 +331,7 @@
     </section>
 
     <!-- DOCUMENTS & CERTIFICATES -->
-    <section id="documents" class="py-24 bg-white">
+    <section id="documents" class="py-24 bg-cool-grey">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-navy mb-16 text-center" data-i18n="docs_title">Documents & Certificates</h2>
             <div id="documents-grid" class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -329,11 +341,11 @@
     </section>
 
     <!-- PARTNERS -->
-    <section id="partners" class="py-24 bg-cool-grey">
+    <section id="partners" class="py-24 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-navy mb-16 text-center" data-i18n="partners_title">AIRLINE PARTNERS</h2>
             <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
-                <div class="bg-white p-8 rounded-xl shadow-sm text-center flex flex-col items-center h-full border border-border-grey">
+                <div class="bg-cool-grey p-8 rounded-xl shadow-sm text-center flex flex-col items-center h-full border border-border-grey">
                     <div class="h-24 w-full mb-6 flex items-center justify-center">
                         <img src="images/ural-airlines.png" alt="Ural Airlines" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="h-full object-contain" loading="lazy">
                         <div class="h-20 w-32 img-placeholder hidden">URAL LOGO</div>
@@ -341,7 +353,7 @@
                     <h3 class="font-bold text-xl text-navy mb-2">URAL AIRLINES</h3>
                     <p class="text-sm text-text-secondary" data-i18n="partner_ural_desc">Official Representative in Armenia</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm text-center flex flex-col items-center h-full border border-border-grey">
+                <div class="bg-cool-grey p-8 rounded-xl shadow-sm text-center flex flex-col items-center h-full border border-border-grey">
                     <div class="h-24 w-full mb-6 flex items-center justify-center">
                         <img src="images/hayways.png" alt="Hayways" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="h-full object-contain" loading="lazy">
                         <div class="h-20 w-32 img-placeholder hidden">HAYWAYS LOGO</div>
@@ -354,52 +366,52 @@
     </section>
 
     <!-- FAQ SECTION -->
-    <section id="faq" class="py-24 bg-white">
+    <section id="faq" class="py-24 bg-cool-grey">
         <div class="container mx-auto px-4 max-w-3xl">
             <h2 class="text-3xl font-bold text-navy mb-16 text-center" data-i18n="faq_title">FREQUENTLY ASKED QUESTIONS</h2>
             <div class="space-y-6">
                 <!-- Q1 -->
-                <div class="border border-border-grey rounded-xl p-6 hover:shadow-md transition">
+                <div class="border border-border-grey rounded-xl p-6 hover:shadow-md transition bg-white">
                     <h3 class="font-bold text-navy mb-3 text-lg" data-i18n="faq_q1">Do you transport Dangerous Goods?</h3>
                     <p class="text-sm text-text-secondary leading-relaxed" data-i18n="faq_a1">Yes, we hold the necessary certifications and have professional specialists to handle Dangerous Goods transportation safely and legally.</p>
                 </div>
                 <!-- Q2 -->
-                <div class="border border-border-grey rounded-xl p-6 hover:shadow-md transition">
+                <div class="border border-border-grey rounded-xl p-6 hover:shadow-md transition bg-white">
                     <h3 class="font-bold text-navy mb-3 text-lg" data-i18n="faq_q2">Can you ship cargo from Russia to Armenia now?</h3>
                     <p class="text-sm text-text-secondary leading-relaxed" data-i18n="faq_a2">Absolutely. As the official representative of Ural Airlines, we ensure uninterrupted cargo flights between Moscow/Yekaterinburg and Yerevan despite restrictions.</p>
                 </div>
                 <!-- Q3 -->
-                <div class="border border-border-grey rounded-xl p-6 hover:shadow-md transition">
+                <div class="border border-border-grey rounded-xl p-6 hover:shadow-md transition bg-white">
                     <h3 class="font-bold text-navy mb-3 text-lg" data-i18n="faq_q3">How is the shipping cost calculated?</h3>
                     <p class="text-sm text-text-secondary leading-relaxed" data-i18n="faq_a3">Cost depends on weight and volume. The volumetric weight is calculated as (Length x Width x Height) / 6000. You pay for the higher of the two weights.</p>
                 </div>
                 <!-- Q4 -->
-                <div class="border border-border-grey rounded-xl p-6 hover:shadow-md transition">
+                <div class="border border-border-grey rounded-xl p-6 hover:shadow-md transition bg-white">
                     <h3 class="font-bold text-navy mb-3 text-lg" data-i18n="faq_q4">What documents are needed to ship cargo?</h3>
                     <p class="text-sm text-text-secondary leading-relaxed" data-i18n="faq_a4">Commercial invoice, packing list and air waybill data. Dangerous goods also need a Shipper’s Declaration and SDS. [CONFIRM LIST]</p>
                 </div>
                 <!-- Q5 -->
-                <div class="border border-border-grey rounded-xl p-6 hover:shadow-md transition">
+                <div class="border border-border-grey rounded-xl p-6 hover:shadow-md transition bg-white">
                     <h3 class="font-bold text-navy mb-3 text-lg" data-i18n="faq_q5">How long does delivery take?</h3>
                     <p class="text-sm text-text-secondary leading-relaxed" data-i18n="faq_a5">Usually [X-Y] days depending on the route; see the schedule above.</p>
                 </div>
                 <!-- Q6 -->
-                <div class="border border-border-grey rounded-xl p-6 hover:shadow-md transition">
+                <div class="border border-border-grey rounded-xl p-6 hover:shadow-md transition bg-white">
                     <h3 class="font-bold text-navy mb-3 text-lg" data-i18n="faq_q6">Which dangerous goods do you accept?</h3>
                     <p class="text-sm text-text-secondary leading-relaxed" data-i18n="faq_a6">We handle [CLASSES] in line with airline and IATA rules. Contact us before shipping.</p>
                 </div>
                 <!-- Q7 -->
-                <div class="border border-border-grey rounded-xl p-6 hover:shadow-md transition">
+                <div class="border border-border-grey rounded-xl p-6 hover:shadow-md transition bg-white">
                     <h3 class="font-bold text-navy mb-3 text-lg" data-i18n="faq_q7">Can I track my shipment?</h3>
                     <p class="text-sm text-text-secondary leading-relaxed" data-i18n="faq_a7">Yes, send us your air waybill number and we will give you the status.</p>
                 </div>
                 <!-- Q8 -->
-                <div class="border border-border-grey rounded-xl p-6 hover:shadow-md transition">
+                <div class="border border-border-grey rounded-xl p-6 hover:shadow-md transition bg-white">
                     <h3 class="font-bold text-navy mb-3 text-lg" data-i18n="faq_q8">Which cities do you deliver to?</h3>
                     <p class="text-sm text-text-secondary leading-relaxed" data-i18n="faq_a8">Russia and the Urals regions: [CITIES].</p>
                 </div>
                 <!-- Q9 -->
-                <div class="border border-border-grey rounded-xl p-6 hover:shadow-md transition">
+                <div class="border border-border-grey rounded-xl p-6 hover:shadow-md transition bg-white">
                     <h3 class="font-bold text-navy mb-3 text-lg" data-i18n="faq_q9">How do I get a quote?</h3>
                     <p class="text-sm text-text-secondary leading-relaxed" data-i18n="faq_a9">Fill in the form below or message us on WhatsApp or Telegram.</p>
                 </div>
@@ -747,11 +759,11 @@
                     const response = await fetch(doc.file, { method: 'HEAD' });
                     if (response.ok) {
                         const card = document.createElement('div');
-                        card.className = "bg-cool-grey p-6 rounded-xl border border-border-grey flex flex-col items-center text-center hover:shadow-lg transition";
+                        card.className = "bg-white p-6 rounded-xl border border-border-grey flex flex-col items-center text-center hover:shadow-lg transition";
                         card.innerHTML = `
                             <i class="fa-solid fa-file-pdf text-4xl text-ruby mb-4"></i>
                             <h4 class="font-bold text-sm text-navy mb-3">${doc.title[lang]}</h4>
-                            <a href="${doc.file}" target="_blank" class="text-xs bg-white border border-ruby text-ruby px-4 py-2 rounded hover:bg-ruby hover:text-white transition font-bold uppercase tracking-wide" data-i18n="btn_download">${translations[lang].btn_download}</a>
+                            <a href="${doc.file}" target="_blank" class="text-xs bg-cool-grey border border-ruby text-ruby px-4 py-2 rounded hover:bg-ruby hover:text-white transition font-bold uppercase tracking-wide" data-i18n="btn_download">${translations[lang].btn_download}</a>
                         `;
                         grid.appendChild(card);
                     }
