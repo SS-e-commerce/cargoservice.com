@@ -77,7 +77,7 @@
     </div>
 
     <!-- HEADER -->
-    <header class="sticky top-0 z-50 bg-white border-b border-border-grey shadow-sm">
+    <header class="sticky top-0 z-50 bg-white border-b border-border-grey shadow-sm h-[70px]">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <a href="#home" class="flex items-center gap-3 hover:opacity-80 transition">
                 <!-- Logo expects images/logo.png -->
@@ -108,7 +108,7 @@
             
             <button class="lg:hidden text-xl text-navy" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"><i class="fa-solid fa-bars"></i></button>
         </div>
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t p-4">
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t p-4 absolute w-full shadow-lg">
             <a href="#home" class="block py-2 text-sm">Home</a>
             <a href="#about" class="block py-2 text-sm">About Us</a>
             <a href="#schedule" class="block py-2 text-sm">Schedule</a>
@@ -120,7 +120,7 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section id="home" class="relative h-[600px] flex items-center bg-navy overflow-hidden">
+    <section id="home" class="relative h-[600px] flex items-center bg-navy overflow-hidden scroll-mt-[70px]">
         <img src="images/hero.jpg" alt="Cargo Plane" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" class="absolute inset-0 w-full h-full object-cover opacity-40" loading="lazy">
         <div class="absolute inset-0 img-placeholder opacity-20 border-none bg-navy hidden">UPLOAD images/hero.jpg</div>
         <div class="container mx-auto px-4 relative z-10 text-center text-white">
@@ -136,8 +136,8 @@
         </div>
     </section>
 
-    <!-- ABOUT US SECTION (UPDATED) -->
-    <section id="about" class="py-24 bg-cool-grey">
+    <!-- ABOUT US SECTION -->
+    <section id="about" class="py-24 bg-cool-grey scroll-mt-[70px]">
         <div class="container mx-auto px-4 max-w-5xl">
             <!-- Title with more spacing and visibility -->
             <div class="text-center mb-16">
@@ -186,7 +186,7 @@
     </section>
 
     <!-- HOW IT WORKS -->
-    <section id="how-it-works" class="py-24 bg-white">
+    <section id="how-it-works" class="py-24 bg-white scroll-mt-[70px]">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-navy mb-16 text-center" data-i18n="hiw_title">HOW IT WORKS</h2>
             <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
@@ -215,7 +215,7 @@
     </section>
 
     <!-- FLIGHT SCHEDULE -->
-    <section id="schedule" class="py-24 bg-cool-grey">
+    <section id="schedule" class="py-24 bg-cool-grey scroll-mt-[70px]">
         <div class="container mx-auto px-4 max-w-5xl">
             <h2 class="text-3xl font-bold text-navy mb-4 text-center" data-i18n="schedule_title">FLIGHT SCHEDULE</h2>
             <p class="text-center text-sm text-text-secondary mb-10" data-i18n="last_updated">Last updated: [DATE]</p>
@@ -250,7 +250,7 @@
     </section>
 
     <!-- PRICING INFO -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-white scroll-mt-[70px]">
         <div class="container mx-auto px-4 max-w-3xl text-center">
             <h2 class="text-2xl font-bold text-navy mb-6" data-i18n="pricing_title">How Price is Calculated</h2>
             <p class="text-base text-text-secondary mb-6 leading-relaxed" data-i18n="pricing_desc">Chargeable weight is the greater of actual weight and volumetric weight.</p>
@@ -263,7 +263,7 @@
     </section>
 
     <!-- SERVICES -->
-    <section id="services" class="py-24 bg-cool-grey">
+    <section id="services" class="py-24 bg-cool-grey scroll-mt-[70px]">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-navy mb-16 text-center" data-i18n="services_title">OUR SERVICES</h2>
             <div class="grid md:grid-cols-3 gap-8">
@@ -293,7 +293,7 @@
     </section>
 
     <!-- DANGEROUS GOODS SECTION -->
-    <section id="dangerous-goods" class="py-24 bg-white">
+    <section id="dangerous-goods" class="py-24 bg-white scroll-mt-[70px]">
         <div class="container mx-auto px-4 max-w-4xl">
             <h2 class="text-3xl font-bold text-navy mb-8 text-center" data-i18n="dg_title">DANGEROUS GOODS TRANSPORTATION</h2>
             <div class="bg-cool-grey p-8 lg:p-12 rounded-2xl shadow-lg border border-border-grey">
@@ -331,7 +331,7 @@
     </section>
 
     <!-- DOCUMENTS & CERTIFICATES -->
-    <section id="documents" class="py-24 bg-cool-grey">
+    <section id="documents" class="py-24 bg-cool-grey scroll-mt-[70px]">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-navy mb-16 text-center" data-i18n="docs_title">Documents & Certificates</h2>
             <div id="documents-grid" class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -341,7 +341,7 @@
     </section>
 
     <!-- PARTNERS -->
-    <section id="partners" class="py-24 bg-white">
+    <section id="partners" class="py-24 bg-white scroll-mt-[70px]">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-navy mb-16 text-center" data-i18n="partners_title">AIRLINE PARTNERS</h2>
             <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
@@ -366,7 +366,7 @@
     </section>
 
     <!-- FAQ SECTION -->
-    <section id="faq" class="py-24 bg-cool-grey">
+    <section id="faq" class="py-24 bg-cool-grey scroll-mt-[70px]">
         <div class="container mx-auto px-4 max-w-3xl">
             <h2 class="text-3xl font-bold text-navy mb-16 text-center" data-i18n="faq_title">FREQUENTLY ASKED QUESTIONS</h2>
             <div class="space-y-6">
@@ -420,7 +420,7 @@
     </section>
 
     <!-- CONTACT & MAP -->
-    <section id="contact" class="py-24 bg-navy text-white">
+    <section id="contact" class="py-24 bg-navy text-white scroll-mt-[70px]">
         <div class="container mx-auto px-4">
             <div class="grid lg:grid-cols-2 gap-16">
                 <div>
